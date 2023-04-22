@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+* {
+  font-family: "Shippori Mincho B1", "serif";
+}
+
+.search::placeholder {
+  font-weight: 700;
+
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
