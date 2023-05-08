@@ -1,13 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap");
 * {
   font-family: "Shippori Mincho B1", "serif";
 }
 
 .search::placeholder {
   font-weight: 700;
-
 }
 
+.customScrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.customScrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 90, 119, 0.074);
+  border-radius: 5px;
+}
+
+.customScrollbar1::-webkit-scrollbar {
+  width: 7px;
+}
+
+.customScrollbar1::-webkit-scrollbar-track {
+  background-color: #F1F1F1;
+}
+
+.customScrollbar1::-webkit-scrollbar-thumb {
+  background-color: #C1C1C1;
+  border-radius: 7px;
+}
+
+
+.active:active{
+  color:blue;
+}
 
 @tailwind base;
 @tailwind components;

@@ -11,8 +11,9 @@ import { CgShapeCircle } from "react-icons/cg";
 
 const NavBar = () => {
   return (
-    <nav className="w-full h-[70px] bg-gray-100 flex">
-      <div className="h-full w-[250px] border-r-[1px] border-gray-400 border-opacity-40 flex gap-2 items-center px-5">
+    <nav className="w-full h-[70px] bg-gray-100 absolute top-0 flex border-b-[1px] border-gray-400 
+    border-opacity-40 z-10">
+      <div className="h-full min-w-[250px] border-r-[1px] border-gray-400 border-opacity-40 flex gap-2 items-center px-5">
         <GiShop className="lg:text-3xl sm:text-xl text-base  text-gray-500" />
         <h1 className="uppercase font-extrabold text-gray-800 lg:text-2xl sm:text-xl text-lg">
           shop
