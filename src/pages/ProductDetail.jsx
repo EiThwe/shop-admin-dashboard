@@ -34,13 +34,125 @@ const ProductDetail = () => {
           <h1 className="font-bold"> Product Detail</h1>
         </div>
         <div className="w-full p-5 rounded-b-2xl shadow-xl bg-white">
-          <div className="flex w-full gap-2">
-            <div className="w-[30%] h-[200px] bg-red-300">Hello</div>
-            <div className="w-[50%] h-[200px] bg-green-300">Hello</div>
-            <div className="w-[20%] h-[200px] bg-blue-300">Hello</div>
+          <div className="flex w-full h-[800px] gap-5">
+            <div className="w-[30%] h-full bg-red-300">Hello</div>
+            <div className="w-[45%] h-full ">
+              <div className="w-full h-full">
+                <h2 className="text-lg font-bold text-gray-600 mb-3">
+                  Pure Leather Purse for Woman
+                </h2>
+                <p className="text-gray-400">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1990.
+                </p>
+                <br />
+                <p className="text-gray-400">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1990. Lorem Ipsum is simply
+                  dummy text of the printing and typesetting industry.
+                </p>
+                <br />
+                <div className="flex flex-col gap-3">
+                  <h6 className="text-sm text-gray-600 font-bold">
+                    Available offers
+                  </h6>
+                  <p className="text-sm text-gray-400 tracking-[0.015rem]">
+                    <span className=" text-gray-600 font-bold">
+                      Special Price :
+                    </span>{" "}
+                    Get extra 16% off (price inclusive of discount){" "}
+                    <a href="#" className="text-decoration-none text-blue-500">
+                      T&C
+                    </a>
+                  </p>
+                  <p className="text-sm text-gray-400 tracking-[0.015rem]">
+                    <span className=" text-gray-600 font-bold">
+                      Bank Offer :
+                    </span>{" "}
+                    10% off on XYZ Bank Cards, up to $12. On orders of $200 and
+                    above{" "}
+                    <a href="#" className="text-decoration-none text-blue-500">
+                      T&C
+                    </a>
+                  </p>
+                  <p className="text-sm text-gray-400 tracking-[0.015rem]">
+                    <span className=" text-gray-600 font-bold">
+                      Bank Offer :
+                    </span>{" "}
+                    5% Unlimited Cashback on Ekka XYZ Bank Credit Card{" "}
+                    <a href="#" className="text-decoration-none text-blue-500">
+                      T&C
+                    </a>
+                  </p>
+                  <p className="text-sm text-gray-400 tracking-[0.015rem]">
+                    <span className=" text-gray-600 font-bold">
+                      Bank Offer :
+                    </span>{" "}
+                    Flat $50 off on first Ekka Pay Later order of $200 and above{" "}
+                    <a href="#" className="text-decoration-none text-blue-500">
+                      T&C
+                    </a>
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 my-3">
+                  <h2 className="text-base font-bold text-gray-600">
+                    Price: $120
+                  </h2>
+                  <p className="text-gray-400">SKU#: WH12</p>
+                  <div className="flex gap-2">
+                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
+                      S
+                    </button>
+                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
+                      M
+                    </button>
+                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
+                      L
+                    </button>
+                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
+                      XL
+                    </button>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="px-3 py-3 rounded-full bg-blue-300"></button>
+                    <button className="px-3 py-3 rounded-full bg-red-300"></button>
+                    <button className="px-3 py-3 rounded-full bg-yellow-300"></button>
+                    <button className="px-3 py-3 rounded-full bg-green-300"></button>
+                    <button className="px-3 py-3 rounded-full bg-pink-300"></button>
+                  </div>
+                  <div className="flex gap-5">
+                    <div className="p-2 rounded-xl border border-gray-300 text-center text-gray-600">
+                      <h1 className="text-[13px] font-bold">Available</h1>
+                      <p className="text-sm tracking-wide">180</p>
+                    </div>
+                    <div className="p-2 rounded-xl border border-gray-300 text-center text-gray-600">
+                      <h1 className="text-[13px] font-bold">Pending</h1>
+                      <p className="text-sm tracking-wide">50</p>
+                    </div>
+                    <div className="p-2 rounded-xl border border-gray-300 text-center text-gray-600">
+                      <h1 className="text-[13px] font-bold">InOrder</h1>
+                      <p className="text-sm tracking-wide">20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-[25%] h-full bg-blue-300">Hello</div>
           </div>
         </div>
       </div>
+      <footer className="text-center text-sm p-3 bg-white">
+        <p>
+          {" "}
+          Copyright © 2023{" "}
+          <a href="" className="text-decoration-none text-blue-400">
+            Ekka Admin Dashboard
+          </a>
+          . All Rights Reserved.
+        </p>
+      </footer>
     </Layout>
   );
 };
