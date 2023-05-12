@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import TabSubItems from "./TabSubItems";
 import { Link, useLocation } from "react-router-dom";
@@ -6,17 +6,34 @@ import { Link, useLocation } from "react-router-dom";
 const Tab = ({ item }) => {
   const location = useLocation();
 
-  const { name,pathname,Icon, isBordered, subItems } = item;
+  const { name, pathname, Icon, isBordered, subItems } = item;
   const [showSubItems, setShowSubItems] = useState(false);
+  const [isCurrentRoute, setIsCurrentRoute] = useState(null);
 
-  const isCurrentRoute = location.pathname === "/" + name.toLowerCase();
+  useEffect(() => {
+    const isCurrent = subItems.find((item) => {
+      const path = item.toLowerCase().replace(" ", "-");
+
+      if (location.pathname === "/" + path && !showSubItems) {
+        setShowSubItems(true);
+      }
+      return location.pathname === "/" + path;
+    });
+
+    console.log(isCurrent);
+    setIsCurrentRoute(isCurrent);
+  }, []);
+
   return (
-    <Link to={pathname}>
+    <>
       <button
         className={`w-full flex justify-between items-center p-5 relative  ${
           isCurrentRoute ? "text-black" : "text-gray-400"
         }`}
-        onClick={() => setShowSubItems(!showSubItems)}
+        onClick={() => {
+          console.log("click");
+          setShowSubItems(!showSubItems);
+        }}
       >
         <div className="flex gap-2 justify-start items-center">
           <Icon
@@ -33,10 +50,18 @@ const Tab = ({ item }) => {
             />
           </div>
         )}
-        {isCurrentRoute && <div className="absolute w-[5px] rounded-sm bg-blue-500 h-full left-1"></div>}
+        {isCurrentRoute && (
+          <div className="absolute w-[5px] rounded-sm bg-blue-500 h-full left-1"></div>
+        )}
       </button>
-      {subItems.length>0 && <TabSubItems showSubItems={showSubItems} subItems={subItems} />}
-    </Link>
+      {subItems.length > 0 && (
+        <TabSubItems
+          showSubItems={showSubItems}
+          subItems={subItems}
+          isCurrentRoute={isCurrentRoute}
+        />
+      )}
+    </>
   );
 };
 

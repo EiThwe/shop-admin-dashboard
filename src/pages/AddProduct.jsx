@@ -1,22 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import Layout from "../components/Layout";
 import { IoIosArrowForward } from "react-icons/io";
-import {AiOutlineLoading3Quarters} from "react-icons/ai"
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import uploadPreview from "../assets/upload-preview.jpg";
 import { MdOutlineModeEditOutline } from "react-icons/md";
 import { useCreateProductsMutation } from "../feature/api/productApi";
 import Swal from "sweetalert2";
+import InputImageCard from "../components/InputImageCard";
+import InputImageUrl from "../components/InputImageUrl";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const textInput = useRef(null);
-  const [imageUrl, setImageUrl] = useState("");
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [createProducts] = useCreateProductsMutation();
-  const navigate = useNavigate();
+
+  const [imageUrlOne, setImageUrlOne] = useState("");
+  const [imageUrlTwo, setImageUrlTwo] = useState("");
+  const [imageUrlThree, setImageUrlThree] = useState("");
+  const [imageUrlFour, setImageUrlFour] = useState("");
+  const [activeInputImage, setActiveInputImage] = useState("One");
 
   // useEffect(() => {
   //   getMeta("https://i.postimg.cc/kGGtSHb7/kindpng-43694.png").then((img) => {
@@ -34,7 +41,7 @@ const AddProduct = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const item = { title, price, images: [imageUrl], description };
+    const item = { title, price, images: [imageUrlOne], description };
     console.log(item);
     const { data, error } = await createProducts(item);
     console.log(data);
@@ -60,7 +67,7 @@ const AddProduct = () => {
         if (result.isConfirmed) {
           setTitle("");
           setDescription("");
-          setImageUrl("");
+          setImageUrlOne("");
           setPrice("");
         }
       });
@@ -98,24 +105,47 @@ const AddProduct = () => {
           </div>
           <div className="w-full p-5 rounded-b-2xl shadow-xl bg-white">
             <div className="flex gap-5 justify-center items-start">
-              <div
-                className="min-w-[320px] min-h-[320px] py-[20px] flex justify-center items-center rounded-2xl border
-             border-gray-200 sticky top-[30px] overflow-hidden"
-              >
-                <img
-                  src={imageUrl ? imageUrl : uploadPreview}
-                  alt="Image"
-                  className="w-[275px] rounded-2xl object-cover  "
-                />
-                <button
-                  onClick={() => textInput.current.focus()}
-                  className="absolute top-[30px] right-[30px] bg-white shadow-xl text-2xl rounded-xl w-[40px] h-[40px] flex justify-center items-center"
+              <div className="flex flex-col gap-5 w-[30%] h-auto sticky top-[30px]">
+                <div
+                  className="w-full min-h-[320px] py-[20px] flex justify-center items-center rounded-2xl border
+             border-gray-200  overflow-hidden"
                 >
-                  <MdOutlineModeEditOutline color="gray" />
-                </button>
+                  <img
+                    src={imageUrlOne ? imageUrlOne : uploadPreview}
+                    alt="Image"
+                    className="w-[275px] rounded-2xl object-cover  "
+                  />
+                  <button
+                    onClick={() => {
+                      textInput.current.focus();
+                      setActiveInputImage("One");
+                    }}
+                    className="absolute top-[30px] right-[30px] bg-white shadow-xl text-2xl rounded-xl w-[40px] h-[40px] flex justify-center items-center"
+                  >
+                    <MdOutlineModeEditOutline color="gray" />
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-3 gap-3 h-[100px] ">
+                  <InputImageCard
+                    imageUrl={imageUrlTwo}
+                    setActiveInputImage={setActiveInputImage}
+                    id="Two"
+                  />
+                  <InputImageCard
+                    imageUrl={imageUrlThree}
+                    setActiveInputImage={setActiveInputImage}
+                    id="Three"
+                  />
+                  <InputImageCard
+                    imageUrl={imageUrlFour}
+                    setActiveInputImage={setActiveInputImage}
+                    id="Four"
+                  />
+                </div>
               </div>
 
-              <div className="w-full flex flex-col gap-5">
+              <div className="w-[70%] flex flex-col gap-5">
                 <div className="grid grid-cols-2 gap-5">
                   <div className="flex flex-col gap-2">
                     <label
@@ -143,18 +173,45 @@ const AddProduct = () => {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="image" className="font-bold text-gray-400">
-                    Image Url
-                  </label>
-                  <input
-                    value={imageUrl}
-                    onChange={(e) => setImageUrl(e.target.value)}
-                    type="text"
-                    className="w-full h-[50px] rounded-xl border border-gray-200 px-3"
-                    ref={textInput}
-                  />
-                </div>
+
+                <>
+                  {activeInputImage === "One" && (
+                    <InputImageUrl
+                      value={imageUrlOne}
+                      setValue={setImageUrlOne}
+                      id={"One"}
+                      textInput={textInput}
+                    />
+                  )}
+
+                  {activeInputImage === "Two" && (
+                    <InputImageUrl
+                      value={imageUrlTwo}
+                      setValue={setImageUrlTwo}
+                      id={"Two"}
+                      textInput={textInput}
+                    />
+                  )}
+
+                  {activeInputImage === "Three" && (
+                    <InputImageUrl
+                      value={imageUrlThree}
+                      setValue={setImageUrlThree}
+                      id={"Three"}
+                      textInput={textInput}
+                    />
+                  )}
+
+                  {activeInputImage === "Four" && (
+                    <InputImageUrl
+                      value={imageUrlFour}
+                      setValue={setImageUrlFour}
+                      id={"Four"}
+                      textInput={textInput}
+                    />
+                  )}
+                </>
+
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="description"
@@ -174,11 +231,15 @@ const AddProduct = () => {
                   type="submit"
                   onClick={onSubmitHandler}
                   className={`text-sm w-[70px] px-3 py-3 rounded-xl text-white ${
-                    isLoading ? "bg-blue-200 flex justify-center items-center gap-2 w-[100px]" : "bg-blue-500"
+                    isLoading
+                      ? "bg-blue-200 flex justify-center items-center gap-2 w-[100px]"
+                      : "bg-blue-500"
                   }`}
                 >
-                  submit 
-                  {isLoading && <AiOutlineLoading3Quarters className=" animate-spin text-xs"/> }
+                  submit
+                  {isLoading && (
+                    <AiOutlineLoading3Quarters className=" animate-spin text-xs" />
+                  )}
                 </button>
               </div>
             </div>

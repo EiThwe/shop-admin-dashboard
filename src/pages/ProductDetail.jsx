@@ -2,6 +2,11 @@ import React from "react";
 import Layout from "../components/Layout";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link, useParams } from "react-router-dom";
+import { detailColors } from "../utils/data";
+import ToggleContainer from "../components/ToggleContainer";
+import { MdStarRate } from "react-icons/md";
+import ProfileCard from "../components/ProfileCard";
+
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -33,28 +38,40 @@ const ProductDetail = () => {
         <div className="w-full p-5 rounded-t-2xl shadow-xl bg-white border-b-[1px] border-gray-200">
           <h1 className="font-bold"> Product Detail</h1>
         </div>
-        <div className="w-full p-5 rounded-b-2xl shadow-xl bg-white">
-          <div className="flex w-full h-[800px] gap-5">
+        <div className="w-full p-8 rounded-b-2xl shadow-xl bg-white">
+          <div className="flex w-full mb-[30px] gap-5">
             <div className="w-[30%] h-full bg-red-300">Hello</div>
             <div className="w-[45%] h-full ">
-              <div className="w-full h-full">
-                <h2 className="text-lg font-bold text-gray-600 mb-3">
+              <div className="w-full h-full flex flex-col gap-3">
+                <h2 className="text-lg font-bold text-gray-600">
                   Pure Leather Purse for Woman
                 </h2>
+                <div className="flex gap-1">
+                  {[0,1,2,3,4].map((item)=>(
+                   <MdStarRate
+                   size={20}
+                   key={item}
+                   className={`${
+                     item < 4 ? "text-yellow-400" : "text-gray-600"
+                   }`}
+                   />
+                  )
+                )}
+                </div>
                 <p className="text-gray-400">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1990.
                 </p>
-                <br />
+               
                 <p className="text-gray-400">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1990. Lorem Ipsum is simply
                   dummy text of the printing and typesetting industry.
                 </p>
-                <br />
-                <div className="flex flex-col gap-3">
+               
+                <div className="flex flex-col gap-3 my-2">
                   <h6 className="text-sm text-gray-600 font-bold">
                     Available offers
                   </h6>
@@ -96,31 +113,28 @@ const ProductDetail = () => {
                     </a>
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 my-3">
+                <div className="flex flex-col gap-3 my-2">
                   <h2 className="text-base font-bold text-gray-600">
                     Price: $120
                   </h2>
-                  <p className="text-gray-400">SKU#: WH12</p>
+                  <h3 className="text-gray-400">SKU#: WH12</h3>
                   <div className="flex gap-2">
-                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
-                      S
-                    </button>
-                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
-                      M
-                    </button>
-                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
-                      L
-                    </button>
-                    <button className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400">
-                      XL
-                    </button>
+                    {["S", "M", "L", "XL"].map((data, index) => (
+                      <button
+                        className="px-[7px] py-[1px] border border-gray-400 rounded-xl text-[11px] text-gray-400"
+                        key={index}
+                      >
+                        {data}
+                      </button>
+                    ))}
                   </div>
                   <div className="flex gap-2">
-                    <button className="px-3 py-3 rounded-full bg-blue-300"></button>
-                    <button className="px-3 py-3 rounded-full bg-red-300"></button>
-                    <button className="px-3 py-3 rounded-full bg-yellow-300"></button>
-                    <button className="px-3 py-3 rounded-full bg-green-300"></button>
-                    <button className="px-3 py-3 rounded-full bg-pink-300"></button>
+                    {detailColors.map((data, index) => (
+                      <button
+                        className={`px-3 py-3 rounded-full ${data}`}
+                        key={index}
+                      ></button>
+                    ))}
                   </div>
                   <div className="flex gap-5">
                     <div className="p-2 rounded-xl border border-gray-300 text-center text-gray-600">
@@ -139,8 +153,11 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[25%] h-full bg-blue-300">Hello</div>
+            <div className="w-[25%] h-full">
+              <ProfileCard/>
+            </div>
           </div>
+          <ToggleContainer />
         </div>
       </div>
       <footer className="text-center text-sm p-3 bg-white">
