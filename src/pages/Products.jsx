@@ -6,6 +6,7 @@ import Loading from "../components/Loading";
 import { IoIosArrowForward } from "react-icons/io";
 import Pagination from "../components/Pagination";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Products = () => {
   const [page, setPage] = useState(1);
@@ -69,6 +70,7 @@ const Products = () => {
           </div>
         </div>
       )}
+      <Footer/>
     </Layout>
   );
 };

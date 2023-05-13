@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import AddProduct from "./pages/AddProduct";
 import ProductDetail from "./pages/ProductDetail";
 import EditProduct from "./pages/EditProduct";
+import SubCategory from "./pages/SubCategory";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
+        <Route path="/sub-category" element={<SubCategory/>}/>
       </Routes>
     </div>
   );

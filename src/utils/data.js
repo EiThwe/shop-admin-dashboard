@@ -167,3 +167,134 @@ export const profileInfo = [
     text: "+00 987-654-3210",
   },
 ];
+
+export const categoryListData = [
+  {
+    name: "Clothes",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/clothes.png",
+    category: "Winter Wear",
+    product: "28",
+    totalSell: "2161",
+    status: "ACTIVE",
+  },
+  {
+    name: "Footwear",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/footwear.png",
+    category: "Sport Shoes",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+  },
+  {
+    name: "Footwear",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/footwear.png",
+    category: "Casual Shoes",
+    product: "68",
+    totalSell: "5161",
+    status: "Inactive",
+  },
+  {
+    name: "Clothes",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/clothes.png",
+    category: "Jeans",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+  },
+  {
+    name: "Cosmatics",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/cosmetics.png",
+    category: "Makeup kit",
+    product: "18",
+    totalSell: "1061",
+    status: "ACTIVE",
+  },
+  {
+    name: "Glasses",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/glasses.png",
+    category: "Lenses",
+    product: "82",
+    totalSell: "10061",
+    status: "Inactive",
+  },
+  {
+    name: "Bags",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/bag.png",
+    category: "Shopping Bag",
+    product: "18",
+    totalSell: "3061",
+    status: "ACTIVE",
+  },
+  {
+    name: "Bags",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/bag.png",
+    category: "Gym Backpack",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+  },
+  {
+    name: "Glasses",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/glasses.png",
+    category: "Sunglasses",
+    product: "82",
+    totalSell: "10061",
+    status: "Inactive",
+  },
+  {
+    name: "Jewellry",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/jewelry.png",
+    category: "Earing",
+    product: "68",
+    totalSell: "5161",
+    status: "Inactive",
+  },
+  {
+    name: "Perfume",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/perfume.png",
+    category: "Deodorant",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+  },
+  {
+    name: "Clothes",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/clothes.png",
+    category: "Tops",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+  },
+  {
+    name: "Cosmatics",
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/category/cosmetics.png",
+    category: "Skin care kit",
+    product: "18",
+    totalSell: "1061",
+    status: "ACTIVE",
+  },
+];
+
+export const selectboxData = [
+  "Clothes",
+  "Footwear",
+  "Jewellry",
+  "Perfume",
+  "Cosmetics",
+  "Glasses",
+  "Bags",
+];
+export const selectNumberData = [20, 30, 50, 75, "All"];

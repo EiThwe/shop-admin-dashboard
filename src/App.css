@@ -49,6 +49,23 @@
     opacity: 1;
   }
 }
+.styled-select{
+  position: relative;
+  background-image: url("https://static.thenounproject.com/png/551749-200.png");
+  background-position:  right 1rem center;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  /* background-color: #fdfdfd; */
+}
+.styled-select select{
+  -webkit-appearance: none;
+  position: absolute;
+  background: transparent;
+  outline: none;
+  top: 0;
+  left: 0;
+  /* overflow: visible; */
+}
 
 @tailwind base;
 @tailwind components;

@@ -9,6 +9,7 @@ import { useCreateProductsMutation } from "../feature/api/productApi";
 import Swal from "sweetalert2";
 import InputImageCard from "../components/InputImageCard";
 import InputImageUrl from "../components/InputImageUrl";
+import Footer from "../components/Footer";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -245,6 +246,7 @@ const AddProduct = () => {
             </div>
           </div>
         </div>
+        <Footer/>
       </Layout>
     </>
   );
