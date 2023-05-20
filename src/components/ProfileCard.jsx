@@ -25,8 +25,8 @@ const ProfileCard = () => {
         </div>
       </div>
       <div className="text-gray-400 text-sm flex flex-col gap-1 items-start mt-3 tracking-wide">
-        {profileInfo.map(({Icon,text}, index) => (
-          <div className="flex gap-2 justify-center items-center">
+        {profileInfo.map(({ Icon, text }, index) => (
+          <div key={index} className="flex gap-2 justify-center items-center">
             <Icon />
             <div>{text}</div>
           </div>

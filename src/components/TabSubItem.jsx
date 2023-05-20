@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const TabSubItem = ({ item, isCurrentRoute }) => {
   const pathname = "/" + item.toLowerCase().replace(" ", "-");
   if (isCurrentRoute === item) {
-    console.log("True");
   }
   return (
     <Link to={pathname}>

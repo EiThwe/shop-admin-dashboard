@@ -8,6 +8,10 @@ import AddProduct from "./pages/AddProduct";
 import ProductDetail from "./pages/ProductDetail";
 import EditProduct from "./pages/EditProduct";
 import SubCategory from "./pages/SubCategory";
+import MainCategory from "./pages/MainCategory";
+import UsersGrid from "./pages/UsersGrid";
+import UserList from "./pages/UserList";
+
 
 const App = () => {
   return (
@@ -20,9 +24,14 @@ const App = () => {
         <Route path="/dashboard" element={<AdminDashboard />} />
         <Route path="/grid-product" element={<Products />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/edit-product/:id" element={<EditProduct />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
-        <Route path="/sub-category" element={<SubCategory/>}/>
+        <Route path="/sub-category" element={<SubCategory />} />
+        <Route path="/main-category" element={<MainCategory />} />
+        <Route path="/user-grid" element={<UsersGrid />} />
+        <Route path="/user-list" element={<UserList />} />
+        
       </Routes>
     </div>
   );

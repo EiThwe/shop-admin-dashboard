@@ -13,6 +13,12 @@ export const productApi = createApi({
         providesTags: ["productApi"],
       }),
     }),
+    getProductById: builder.query({
+      query: (id) => ({
+        url: `/products/${id}`,
+        providesTags: ["productApi"],
+      }),
+    }),
     createProducts: builder.mutation({
       query: (item) => ({
         url: "/products",
@@ -28,10 +34,20 @@ export const productApi = createApi({
       }),
       invalidatesTags: ["productApi"],
     }),
+    updateProduct: builder.mutation({
+      query: (item) => ({
+        url: `/products/${item.id}`,
+        method: "PATCH",
+        body: item,
+      }),
+      invalidatesTags:["productApi"]
+    }),
   }),
 });
 export const {
   useGetProductsQuery,
   useCreateProductsMutation,
   useDeleteProductMutation,
+  useGetProductByIdQuery,
+  useUpdateProductMutation
 } = productApi;

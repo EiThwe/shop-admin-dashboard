@@ -42,7 +42,7 @@ const AddProduct = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const item = { title, price, images: [imageUrlOne], description };
+    const item = { title, price, images: [imageUrlOne,imageUrlTwo,imageUrlThree,imageUrlFour], description };
     console.log(item);
     const { data, error } = await createProducts(item);
     console.log(data);
@@ -55,7 +55,7 @@ const AddProduct = () => {
         confirmButtonText: "View All",
         confirmButtonColor: "rgb(59 130 246)",
       }).then((result) => {
-        if (result.isConfirmed) navigate("/products");
+        if (result.isConfirmed) navigate("/grid-product");
       });
     } else {
       Swal.fire({
@@ -94,7 +94,7 @@ const AddProduct = () => {
               </div>
             </div>
             <div>
-              <Link to={"/products"}>
+              <Link to={"/grid-product"}>
                 <button className="px-5 py-3 bg-blue-500 rounded-2xl text-white font-bold text-sm">
                   View All
                 </button>

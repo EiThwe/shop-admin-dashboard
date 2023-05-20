@@ -7,7 +7,7 @@ import { useDeleteProductMutation } from "../feature/api/productApi";
 import { Link, useNavigate } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
-  const {id, title, price, images } = item;
+  const { id, title, price, images } = item;
 
   const [deleteProduct] = useDeleteProductMutation();
   const deleteHandler = () => {
@@ -47,9 +47,11 @@ const ProductCard = ({ item }) => {
           alt=""
         />
         <div className="absolute top-3 right-3 w-[35px] h-[105px] bg-white rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-          <button className="w-full hover:text-blue-500 h-[35px] flex justify-center items-center text-lg border-b-[1px] text-gray-400">
-            <TbEditCircle />
-          </button>
+          <Link to={`/edit-product/${id}`}>
+            <button className="w-full hover:text-blue-500 h-[35px] flex justify-center items-center text-lg border-b-[1px] text-gray-400">
+              <TbEditCircle />
+            </button>
+          </Link>
           <Link to={`/product-detail/${id}`}>
             <button className="w-full hover:text-blue-500 text-gray-400 h-[35px] flex justify-center items-center  border-b-[1px]">
               <RxEyeOpen />

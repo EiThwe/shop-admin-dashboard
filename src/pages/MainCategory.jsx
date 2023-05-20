@@ -3,35 +3,31 @@ import Layout from "../components/Layout";
 import { IoIosArrowForward } from "react-icons/io";
 import Footer from "../components/Footer";
 import {
-  categoryListData,
   selectNumberData,
-  selectboxData,
-  theadData,
 } from "../utils/data";
-import Table from "../components/Table";
+import TableMainCat from "../components/TableMainCat";
 import TableTopTemplate from "../components/TableTopTemplate";
-
-const SubCategory = () => {
+const MainCategory = () => {
   return (
     <Layout>
       <div className="w-full p-8 bg-gray-100 min-h-full">
         <div className="flex justify-between items-start">
-          <h1 className="text-2xl font-bold text-gray-600">Sub Category</h1>
+          <h1 className="text-2xl font-bold text-gray-600">Main Category</h1>
           <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
             <a href="#" className="text-blue-500">
               Home
             </a>
             <IoIosArrowForward className="text-[12px] text-gray-400" />
             <a href="#" className="text-gray-400">
-              Sub Category
+              Main Category
             </a>
           </div>
         </div>
-        <div className="flex gap-[25px] w-full mt-5">
+        <div className="flex gap-[25px] w-full mt-5 items-start">
           <div className="w-[33%] bg-white rounded-2xl p-6  text-gray-500">
             <div className="flex flex-col gap-7">
               <div className="flex flex-col gap-5">
-                <h1 className="text-xl font-bold">Add Sub Category</h1>
+                <h1 className="text-xl font-bold">Add New Category</h1>
                 <hr className="h-[1px] bg-gray-400 w-full" />
               </div>
               <div className="flex flex-col gap-3">
@@ -67,21 +63,6 @@ const SubCategory = () => {
                 />
               </div>
               <div className="flex flex-col gap-3">
-                <label htmlFor="name" className="font-bold text-[15px]">
-                  Parent Category
-                </label>
-                <select
-                  name="parent category"
-                  className="w-full h-12 p-2 rounded-2xl border border-gray-400 border-opacity-40 text-sm outline-none"
-                >
-                  {selectboxData.map((data, index) => (
-                    <option value={data} key={index}>
-                      {data}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="flex flex-col gap-3">
                 <label htmlFor="full" className="font-bold text-[15px]">
                   Full Description
                 </label>
@@ -110,12 +91,10 @@ const SubCategory = () => {
               </button>
             </div>
           </div>
-          <div className="w-[67%]">
-            <div className="w-full bg-white rounded-2xl p-6 text-gray-400">
-              <TableTopTemplate />
-              <div className="w-full overflow-x-scroll mt-5">
-                <Table />
-              </div>
+          <div className="w-[67%] bg-white rounded-2xl p-6 text-gray-400">
+            <TableTopTemplate/>
+            <div className="w-full overflow-x-scroll mt-5">
+              <TableMainCat/>
             </div>
           </div>
         </div>
@@ -125,4 +104,4 @@ const SubCategory = () => {
   );
 };
 
-export default SubCategory;
+export default MainCategory;
