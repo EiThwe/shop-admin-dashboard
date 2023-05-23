@@ -1,18 +1,62 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const TablePagination = () => {
+const TablePagination = ({ showing, entries }) => {
+  const [pages, setPages] = useState([]);
+  const [activePage, setActivePage] = useState(1);
+
+  const prevHandler = () => {
+    if (activePage > 1) {
+      setActivePage(activePage - 1);
+    }
+  };
+  const nextHandler = () => {
+    if (activePage < pages.length) {
+      setActivePage(activePage + 1);
+    }
+  };
+
+  useEffect(() => {
+    pageCaculation();
+  }, [showing, entries]);
+
+  const pageCaculation = () => {
+    const pageNumber = Math.ceil(entries / showing);
+    const pageArr = [];
+    //generate pages
+    for (let i = 1; i <= pageNumber; i++) {
+      pageArr.push(i);
+    }
+    setPages(pageArr);
+  };
+
   return (
-    <div className="flex justify-between">
-      <h6>Showing 1 to 10 of 10 entries</h6>
+    <div className="flex justify-between my-3 items-center">
+      <h6 className="text-sm font-medium text-gray-600">
+        Showing 1 to {showing} of {entries} entries
+      </h6>
       <div className="flex font-medium text-sm">
-        <button className="border-y border-l rounded-l-lg bg-[#E9ECEF] text-gray-400 px-[10px] h-[30px]">
+        <button
+          className="border-y border-l rounded-l-lg bg-[#E9ECEF] text-gray-600 px-[10px] h-[30px]"
+          onClick={prevHandler}
+        >
           Previous
         </button>
-        <button className={`w-[30px] h-[30px] border-y border-r`}>1</button>
-        <button className={`w-[30px] h-[30px border-y border-r`}>2</button>
-        <button className={`w-[30px] h-[30px] border-y border-r`}>3</button>
-        <button className={`w-[30px] h-[30px] border-y border-r`}>4</button>
-        <button className="border-y border-r rounded-r-lg bg-[#E9ECEF] text-gray-400 px-[10px] h-[30px]">
+        {pages?.map((page) => (
+          <button
+            className={`w-[30px] h-[30px] border-y border-r ${
+              activePage == page && "text-white bg-blue-400 border-blue-400"
+            }`}
+            key={page}
+            onClick={() => setActivePage(page)}
+          >
+            {page}
+          </button>
+        ))}
+
+        <button
+          className="border-y border-r rounded-r-lg bg-[#E9ECEF] text-gray-600 px-[10px] h-[30px]"
+          onClick={nextHandler}
+        >
           Next
         </button>
       </div>

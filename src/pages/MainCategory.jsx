@@ -7,6 +7,7 @@ import {
 } from "../utils/data";
 import TableMainCat from "../components/TableMainCat";
 import TableTopTemplate from "../components/TableTopTemplate";
+import TablePagination from "../components/TablePagination";
 const MainCategory = () => {
   return (
     <Layout>
@@ -95,6 +96,7 @@ const MainCategory = () => {
             <TableTopTemplate/>
             <div className="w-full overflow-x-scroll mt-5">
               <TableMainCat/>
+              <TablePagination showing={10} entries={10}/>
             </div>
           </div>
         </div>

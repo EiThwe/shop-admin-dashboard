@@ -1,5 +1,6 @@
 import React from "react";
 import { MdEdit, MdOutlineClose, MdOutlineMoreVert } from "react-icons/md";
+import MoreDropDown from "./MoreDropDown";
 
 const ContactDetail = ({setShowContactDetail}) => {
   return (
@@ -9,9 +10,7 @@ const ContactDetail = ({setShowContactDetail}) => {
           <button className="">
             <MdEdit />
           </button>
-          <button>
-            <MdOutlineMoreVert />
-          </button>
+          <MoreDropDown iconSize={"text-xs"}/>
           <button onClick={()=>setShowContactDetail(false)}>
             <MdOutlineClose />
           </button>

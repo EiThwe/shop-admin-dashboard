@@ -11,7 +11,8 @@ import SubCategory from "./pages/SubCategory";
 import MainCategory from "./pages/MainCategory";
 import UsersGrid from "./pages/UsersGrid";
 import UserList from "./pages/UserList";
-
+import UserProfile from "./pages/UserProfile";
+import VendorGrid from "./pages/VendorGrid";
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
         <Route path="/main-category" element={<MainCategory />} />
         <Route path="/user-grid" element={<UsersGrid />} />
         <Route path="/user-list" element={<UserList />} />
-        
+        <Route path="/users-profile" element={<UserProfile />} />
+        <Route path="/vendor-grid" element={<VendorGrid />} />
       </Routes>
     </div>
   );

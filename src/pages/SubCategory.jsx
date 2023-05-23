@@ -10,6 +10,7 @@ import {
 } from "../utils/data";
 import Table from "../components/Table";
 import TableTopTemplate from "../components/TableTopTemplate";
+import TablePagination from "../components/TablePagination";
 
 const SubCategory = () => {
   return (
@@ -115,6 +116,7 @@ const SubCategory = () => {
               <TableTopTemplate />
               <div className="w-full overflow-x-scroll mt-5">
                 <Table />
+                <TablePagination showing={13} entries={13}/>
               </div>
             </div>
           </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 
-const AddNewUser = ({ setShowAddUser }) => {
+const EditUser = ({ setShowEditUser }) => {
   return (
     <div className="fixed w-screen h-screen bg-opacity-50 bg-black top-0 left-0 z-[100] flex justify-center items-center">
       <div className="w-[750px] h-[550px] rounded-2xl bg-white">
         <div className="p-5 w-full border-b  border-gray-200 flex justify-between">
-          <h1 className="text-lg font-bold text-gray-600">Add New User</h1>
-          <button className="text-lg" onClick={() => setShowAddUser(false)}>
+          <h1 className="text-lg font-bold text-gray-600">Edit User</h1>
+          <button className="text-lg" onClick={() => setShowEditUser(false)}>
             <MdOutlineClose />
           </button>
         </div>
@@ -103,4 +103,4 @@ const AddNewUser = ({ setShowAddUser }) => {
   );
 };
 
-export default AddNewUser;
+export default EditUser;
