@@ -1,19 +1,19 @@
 import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 
-const EditUser = ({ setShowEditUser }) => {
+const AddNewVendorForm = ({ setShowAddVendor }) => {
   return (
     <div className="fixed w-screen h-screen bg-opacity-50 bg-black top-0 left-0 z-[100] flex justify-center items-center">
       <div className="w-[750px] h-[550px] rounded-2xl bg-white">
         <div className="p-5 w-full border-b  border-gray-200 flex justify-between">
-          <h1 className="text-lg font-bold text-gray-600">Edit User</h1>
-          <button className="text-lg" onClick={() => setShowEditUser(false)}>
+          <h1 className="text-lg font-bold text-gray-600">Add New Vendor</h1>
+          <button className="text-lg" onClick={() => setShowAddVendor(false)}>
             <MdOutlineClose />
           </button>
         </div>
         <div className="w-full px-8 py-3 font-medium text-gray-500 flex flex-col gap-5 text-[15px]">
           <div className="flex w-full justify-center items-center">
-            <h1 className="w-[20%]">User Image</h1>
+            <h1 className="w-[20%]">Vendor Image</h1>
 
             <label htmlFor="fileSelect" className="w-[80%] h-[45px] flex ">
               <div className="w-[80%] h-full flex items-center border border-gray-400   bg-white  rounded-l-md p-3">
@@ -103,4 +103,4 @@ const EditUser = ({ setShowEditUser }) => {
   );
 };
 
-export default EditUser;
+export default AddNewVendorForm;

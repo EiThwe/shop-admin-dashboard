@@ -32,10 +32,11 @@ import {
   HiOutlineTicket,
   HiOutlineUser,
 } from "react-icons/hi2";
+import { IoDiamondOutline } from "react-icons/io5";
 export const sidebarData = [
   {
     name: "Dashboard",
-    pathname: "/",
+    pathname: "/dashboard",
     Icon: MdDashboard,
     isBordered: true,
     subItems: [],
@@ -1133,5 +1134,453 @@ export const vendorGridData = [
         quantity: "$574",
       },
     ],
+  },
+];
+
+export const addVendorData = [
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u1.jpg",
+    name: "Aaren",
+    status: "away",
+    isChecked: true,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u2.jpg",
+    name: "Leon Battista",
+    status: "active",
+    isChecked: true,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u3.jpg",
+    name: "Abriel",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u4.jpg",
+    name: "Emma",
+    status: "active",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u5.jpg",
+    name: "Emily",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u6.jpg",
+    name: "William",
+    status: "unknown",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u7.jpg",
+    name: "Sophia",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u8.jpg",
+    name: "Sophia",
+    status: "unknown",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u1.jpg",
+    name: "Aaren",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u2.jpg",
+    name: "Abby",
+    status: "unknown",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u3.jpg",
+    name: "Abriel",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u4.jpg",
+    name: "Emma",
+    status: "active",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u5.jpg",
+    name: "Emily",
+    status: "unknown",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u6.jpg",
+    name: "William",
+    status: "away",
+    isChecked: false,
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/user/u7.jpg",
+    name: "Sophia",
+    status: "unknown",
+    isChecked: false,
+  },
+];
+
+export const vendorListTableRowData = [
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u1.jpg",
+    name: "Marlee Rena",
+    email: "marleerena@gmail.com",
+    product: "28",
+    totalSell: "2161",
+    status: "ACTIVE",
+    joinOn: "2021-10-30",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u2.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u3.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u4.jpg",
+    name: "Mohini Marlo",
+    email: "mohinimarlo@gmail.com",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+    joinOn: "2021-10-21",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u5.jpg",
+    name: "Nitilo Kathilo",
+    email: "nitilokathilo@gmail.com",
+    product: "18",
+    totalSell: "1061",
+    status: "ACTIVE",
+    joinOn: "2021-10-18",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u6.jpg",
+    name: "Hardi Sandhu",
+    email: "hardisandhu@gmail.com",
+    product: "82",
+    totalSell: "10061",
+    status: "ACTIVE",
+    joinOn: "2021-10-14",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u7.jpg",
+    name: "Bhavlo Malvia",
+    email: "bhavlomalvia@gmail.com",
+    product: "18",
+    totalSell: "3061",
+    status: "ACTIVE",
+    joinOn: "2021-10-05",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u8.jpg",
+    name: "Jeni Dusuja",
+    email: "jenidusuja@gmail.com",
+    product: "60",
+    totalSell: "6061",
+    status: "ACTIVE",
+    joinOn: "2021-10-01",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u1.jpg",
+    name: "Marlee Rena",
+    email: "marleerena@gmail.com",
+    product: "28",
+    totalSell: "2161",
+    status: "ACTIVE",
+    joinOn: "2021-10-30",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u2.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u3.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u4.jpg",
+    name: "Mohini Marlo",
+    email: "mohinimarlo@gmail.com",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+    joinOn: "2021-10-21",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u5.jpg",
+    name: "Nitilo Kathilo",
+    email: "nitilokathilo@gmail.com",
+    product: "18",
+    totalSell: "1061",
+    status: "ACTIVE",
+    joinOn: "2021-10-18",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u6.jpg",
+    name: "Hardi Sandhu",
+    email: "hardisandhu@gmail.com",
+    product: "82",
+    totalSell: "10061",
+    status: "ACTIVE",
+    joinOn: "2021-10-14",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u7.jpg",
+    name: "Bhavlo Malvia",
+    email: "bhavlomalvia@gmail.com",
+    product: "18",
+    totalSell: "3061",
+    status: "ACTIVE",
+    joinOn: "2021-10-05",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u8.jpg",
+    name: "Jeni Dusuja",
+    email: "jenidusuja@gmail.com",
+    product: "60",
+    totalSell: "6061",
+    status: "ACTIVE",
+    joinOn: "2021-10-01",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u1.jpg",
+    name: "Marlee Rena",
+    email: "marleerena@gmail.com",
+    product: "28",
+    totalSell: "2161",
+    status: "ACTIVE",
+    joinOn: "2021-10-30",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u2.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u3.jpg",
+    name: "Johnee Bolbi",
+    email: "johneebolbi@gmail.com",
+    product: "68",
+    totalSell: "5161",
+    status: "ACTIVE",
+    joinOn: "2021-10-25",
+  },
+  {
+    image:
+      "https://maraviyainfotech.com/projects/ekka/ekka-v34/ekka-admin/assets/img/vendor/u4.jpg",
+    name: "Mohini Marlo",
+    email: "mohinimarlo@gmail.com",
+    product: "38",
+    totalSell: "1561",
+    status: "ACTIVE",
+    joinOn: "2021-10-21",
+  },
+];
+export const theadDataVendorList = [
+  {
+    name: "Profile",
+    width: "w-[100px]",
+  },
+  {
+    name: "Name",
+    width: "w-[135px]",
+  },
+  {
+    name: "Email",
+    width: "w-[200px]",
+  },
+  {
+    name: "Product",
+    width: "w-[150px]",
+  },
+  {
+    name: "Total Sell",
+    width: "w-[120px]",
+  },
+  {
+    name: "Status",
+    width: "w-[120px]",
+  },
+  {
+    name: "Join On",
+    width: "w-[120px]",
+  },
+  {
+    name: "Action",
+    width: "w-[120px]",
+  },
+];
+
+export const vendorInfoCardData = [
+  {
+    Icon: HiOutlineUser,
+    quantity: "5300",
+    text: "New Users",
+    bgColor: "bg-blue-400",
+  },
+  {
+    Icon: HiOutlineShoppingCart,
+    quantity: "1953",
+    text: "Order Placed",
+    bgColor: "bg-yellow-400",
+  },
+  {
+    Icon: IoDiamondOutline,
+    quantity: "1450",
+    text: "Total Sales",
+    bgColor: "bg-green-400",
+  },
+];
+
+export const vendorProfileTableRowData = [
+  {
+    order_id: "24541",
+    product_name: "Coach\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSwagger",
+    unit: "1 Unit",
+    order_date: "Oct 20, 2018",
+    order_cost: "$230",
+    status: "Completed",
+  },
+  {
+    order_id: "24541",
+    product_name:
+      "Toddler\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tShoes, Gucci Watch",
+    unit: "2 Units",
+    order_date: "Nov 15, 2018",
+    order_cost: "$550",
+    status: "Delayed",
+  },
+  {
+    order_id: "24541",
+    product_name: "Hat Black\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSuits",
+    unit: "1 Unit",
+    order_date: "Nov 18, 2018",
+    order_cost: "$325",
+    status: "On Hold",
+  },
+  {
+    order_id: "24541",
+    product_name:
+      "Backpack\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGents, Swimming Cap Slin",
+    unit: "5 Units",
+    order_date: "Dec 13, 2018",
+    order_cost: "$200",
+    status: "Completed",
+  },
+  {
+    order_id: "24541",
+    product_name: "Speed 500\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tIgnite",
+    unit: "1 Unit",
+    order_date: "Dec 23, 2018",
+    order_cost: "$150",
+    status: "Cancelled",
+  },
+];
+
+export const dateData = [
+  "Today",
+  "Yesterday",
+  "Last 7 Days",
+  "Last 30 Days",
+  "This Month",
+  "Last Month",
+  "Custom Range",
+];
+
+export const theadDataVendorProfile = [
+  {
+    name: "Order_ID",
+    width: "w-[80px]",
+  },
+  {
+    name: "Product_Name",
+    width: "w-[250px]",
+  },
+  {
+    name: "Units",
+    width: "w-[50px]",
+  },
+  {
+    name: "Order_Date",
+    width: "w-[100px]",
+  },
+  {
+    name: "Order_Cost",
+    width: "w-[100px]",
+  },
+  {
+    name: "Status",
+    width: "w-[120px]",
   },
 ];

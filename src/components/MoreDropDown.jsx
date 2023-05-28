@@ -6,7 +6,7 @@ const MoreDropDown = ({iconSize}) => {
   return (
     <div className="flex flex-col ">
       <button
-        className={`iconSize`}
+        className={`${iconSize}`}
         onClick={() => setShowDropdown(!showDropdown)}
       >
         <MdMoreVert />

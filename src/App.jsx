@@ -13,6 +13,8 @@ import UsersGrid from "./pages/UsersGrid";
 import UserList from "./pages/UserList";
 import UserProfile from "./pages/UserProfile";
 import VendorGrid from "./pages/VendorGrid";
+import VendorList from "./pages/VendorList";
+import VendorProfile from "./pages/VendorProfile";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
         <Route path="/user-list" element={<UserList />} />
         <Route path="/users-profile" element={<UserProfile />} />
         <Route path="/vendor-grid" element={<VendorGrid />} />
+        <Route path="/vendor-list" element={<VendorList />} />
+        <Route path="/vendors-profile" element={<VendorProfile />} />
       </Routes>
     </div>
   );

@@ -31,7 +31,7 @@ const VendorGrid = () => {
           </div>
         </div>
       </div>
-      {showAddVendorCard && <AddNewVendor/>}
+      {showAddVendorCard && <AddNewVendor setShowAddVendorCard={setShowAddVendorCard}/>}
       <Footer />
     </Layout>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import TableHead from "./TableHead";
-import TableBody from "./TableBody";
 import { theadDataUserList } from "../utils/data";
 import TableBodyUserList from "./TableBodyUserList";
 
