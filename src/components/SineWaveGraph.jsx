@@ -34,6 +34,7 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
   };
 
   const chartOptions = {
+    // maintainAspectRatio: false,
     scales: {
       x: {
         grid: {
@@ -46,6 +47,7 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
       y: {
         ticks: {
           display: true,
+            
           suggestedMin: 0, // Set the minimum suggested value for the y-axis
           suggestedMax: 200, // Set the maximum suggested value for the y-axis
           stepSize: 50, // Set the interval between each y-axis tick
