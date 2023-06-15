@@ -34,6 +34,8 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
   };
 
   const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
     scales: {
       x: {
         grid: {
@@ -49,6 +51,7 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
           suggestedMin: 0, // Set the minimum suggested value for the y-axis
           suggestedMax: 200, // Set the maximum suggested value for the y-axis
           stepSize: 50, // Set the interval between each y-axis tick
+          padding: 0,
           callback: function (value) {
             if (
               value === 0 ||
@@ -60,6 +63,12 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
               return value;
             }
             return "";
+          },
+          afterBuildTicks: function (scale) {
+            // Reduce tick height
+            scale.ticks.forEach(function (tick, index, ticks) {
+              tick.height = 2; // Set the desired tick height here
+            });
           },
         },
       },
@@ -106,7 +115,11 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
     },
   };
 
-  return <Line data={chartData} options={chartOptions} />;
+  return (
+    <div className="px-5">
+      <Line data={chartData} options={chartOptions} />
+    </div>
+  );
 };
 
 export default SineWaveGraph;

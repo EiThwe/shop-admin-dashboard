@@ -9,11 +9,11 @@ const SaleReportSineWave = () => {
 
   return (
     <div className="w-full border rounded-xl bg-white shadow-sm">
-        <div className="p-5 border-b">
+      <div className="p-5 border-b">
         <h1 className="font-bold">Sale Report</h1>
       </div>
-      <div className="px-5">
-        <SaleReportToggleContainer/>
+      <div className="">
+        <SaleReportToggleContainer />
       </div>
     </div>
   );

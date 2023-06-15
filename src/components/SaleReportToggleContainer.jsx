@@ -8,7 +8,7 @@ const SaleReportToggleContainer = () => {
   const [activeSlug, setActiveSlug] = useState("today's");
   return (
     <div className="w-full flex flex-col">
-      <div className="flex gap-5 translate-y-[1px] px-5 border-b">
+      <div className="flex gap-5 translate-y-[1px] px-16 border-b">
         {saleReportToggleTab.map(({ name, slug }, index) => (
           <button
             key={index}
@@ -23,7 +23,7 @@ const SaleReportToggleContainer = () => {
           </button>
         ))}
       </div>
-      <div className=" pl-8 pt-8">
+      <div className=" pt-8 px-5">
         {activeSlug === "today's" && <TodaySaleReport />}
         {activeSlug === "monthly" && <MonthlySaleReport />}
         {activeSlug === "yearly" && <YearlySaleReport />}

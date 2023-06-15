@@ -9,5 +9,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      var ticks = document.querySelectorAll(".chartjs-tick");
+      ticks.forEach(function (tick) {
+        tick.style.lineHeight = "6px"; // Adjust the value to reduce the tick height
+      });
+    </script>
   </body>
 </html>

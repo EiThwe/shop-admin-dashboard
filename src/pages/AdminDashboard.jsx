@@ -8,15 +8,16 @@ import SaleReportSineWave from "../components/SaleReportSineWave";
 
 const AdminDashboard = () => {
   return (
-   <Layout>
-    <div className="w-full p-8 flex gap-6">
-      <div className="w-[70%] ">
-        <SaleReportSineWave/>
+    <Layout>
+      <div className="w-full p-8 flex gap-6 ">
+        <div className="w-[65%] ">
+          <SaleReportSineWave />
+        </div>
+        <div className="w-[35%]">
+          <OrderOverviewDoughnutChart />
+        </div>
       </div>
-      <div className="w-[30%]"><OrderOverviewDoughnutChart/></div>
-
-    </div>
-   </Layout>
+    </Layout>
   );
 };
 
