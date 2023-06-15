@@ -33,6 +33,7 @@ const EditProduct = () => {
   const [activeInputImage, setActiveInputImage] = useState("One");
 
   const { data, isLoading } = useGetProductByIdQuery(id);
+ 
 
   useEffect(() => {
     if (data) {

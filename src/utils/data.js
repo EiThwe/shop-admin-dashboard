@@ -64,7 +64,7 @@ export const sidebarData = [
   },
   {
     name: "products",
-    pathname: "/products",
+    pathname: "/",
     Icon: MdChair,
     isBordered: false,
     subItems: ["Add Product", "List Product", "Grid Product"],
@@ -1583,4 +1583,10 @@ export const theadDataVendorProfile = [
     name: "Status",
     width: "w-[120px]",
   },
+];
+
+export const saleReportToggleTab = [
+  { name: "Today's", slug: "today's" },
+  { name: "Monthly", slug: "monthly" },
+  { name: "Yearly", slug: "yearly" },
 ];

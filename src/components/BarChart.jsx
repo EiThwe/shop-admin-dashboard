@@ -54,7 +54,7 @@ const BarChart = () => {
 
   const options = {
     responsive: true,
-
+    maintainAspectRatio: false,
     scales: {
       x: {
         display: false, // Hide x-axis labels

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import TabSubItems from "./TabSubItems";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Tab = ({ item }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const { name, pathname, Icon, isBordered, subItems } = item;
   const [showSubItems, setShowSubItems] = useState(false);
@@ -20,7 +21,9 @@ const Tab = ({ item }) => {
       return location.pathname === "/" + path;
     });
 
-    console.log(isCurrent);
+    if (!isCurrent && location.pathname === pathname)
+      return setIsCurrentRoute(pathname);
+    else console.log(isCurrent);
     setIsCurrentRoute(isCurrent);
   }, []);
 
@@ -32,6 +35,7 @@ const Tab = ({ item }) => {
         }`}
         onClick={() => {
           console.log("click");
+          navigate(pathname);
           setShowSubItems(!showSubItems);
         }}
       >
