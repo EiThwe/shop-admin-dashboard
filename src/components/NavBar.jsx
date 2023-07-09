@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiShop } from "react-icons/gi";
 import {
   IoMdSearch,
@@ -8,25 +8,47 @@ import {
 import { IoSettingsOutline } from "react-icons/io5";
 import { ImUser } from "react-icons/im";
 import { CgShapeCircle } from "react-icons/cg";
+import { BiToggleLeft, BiToggleRight } from "react-icons/bi";
 
-const NavBar = () => {
+const NavBar = ({ showSideBar,setShowSideBar }) => {
+  const [toggle, setToggle] = useState(true);
   return (
-    <nav className="w-full h-[70px] bg-gray-100 absolute top-0 flex border-b-[1px] border-gray-400 
-    border-opacity-40 z-10">
-      <div className="h-full min-w-[250px] border-r-[1px] border-gray-400 border-opacity-40 flex gap-2 items-center px-5">
-        <GiShop className="lg:text-3xl sm:text-xl text-base  text-gray-500" />
-        <h1 className="uppercase font-extrabold text-gray-800 lg:text-2xl sm:text-xl text-lg">
-          shop
-        </h1>
-      </div>
+    <nav
+      className="w-full h-[70px] bg-gray-100 fixed top-0 left-0 border-b-[1px] border-gray-400 
+    border-opacity-40 z-10 flex"
+    >
+      <div className="min-w-[250px] h-full"></div>
       <div className="w-full h-full flex md:justify-between justify-end items-center md:px-5">
-        <div className="justify-evenly items-center w-96 h-10 rounded-2xl bg-gray-200 overflow-hidden md:flex hidden">
-          <input
-            type="text"
-            className="bg-gray-200 w-[85%] outline-none h-full text-sm font-semibold search"
-            placeholder="search..."
-          />
-          <IoMdSearch className="text-gray-400 text-lg" />
+        <div className="flex gap-5">
+          {toggle ? (
+            <button
+              className=""
+              onClick={() => {
+                setToggle((prev) => !prev);
+                setShowSideBar(false);
+              }}
+            >
+              <BiToggleRight className="text-3xl text-gray-500" />
+            </button>
+          ) : (
+            <button
+              className=""
+              onClick={() => {
+                setToggle((prev) => !prev);
+                setShowSideBar(true);
+              }}
+            >
+              <BiToggleLeft className="text-3xl text-gray-500" />
+            </button>
+          )}
+          <div className="justify-evenly items-center w-96 h-10 rounded-2xl bg-gray-200 overflow-hidden md:flex hidden">
+            <input
+              type="text"
+              className="bg-gray-200 w-[85%] outline-none h-full text-sm font-semibold search"
+              placeholder="search..."
+            />
+            <IoMdSearch className="text-gray-400 text-lg" />
+          </div>
         </div>
         <div className="flex">
           <button className="md:hidden border-r-[1px] border-opacity-40 sm:w-[60px] w-[40px] flex justify-center items-center">

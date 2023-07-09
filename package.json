@@ -9,13 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/font": "^7.2.96",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.3.2",
     "chart.js": "^4.3.0",
+    "daterangepicker": "^3.1.0",
+    "flag-icons": "^6.7.0",
     "lottie-react": "^2.4.0",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.0",

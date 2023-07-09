@@ -78,14 +78,14 @@ export const sidebarData = [
   },
   {
     name: "Reviews",
-    pathname: "/",
+    pathname: "/reviews",
     Icon: ImStarHalf,
     isBordered: false,
     subItems: [],
   },
   {
     name: "Brands",
-    pathname: "/",
+    pathname: "/brands",
     Icon: BiTagAlt,
     isBordered: true,
     subItems: [],
@@ -102,8 +102,9 @@ export const sidebarData = [
     pathname: "/",
     Icon: BsXDiamondFill,
     isBordered: false,
-    subItems: ["Material Icons", "Font Awesome Icons", "Bootstrap Icons"],
+    subItems: ["Material Icons", "Font Awesome Icons", "Flag Icons"],
   },
+
   {
     name: "Other Pages",
     pathname: "/",
@@ -1561,27 +1562,31 @@ export const dateData = [
 export const theadDataVendorProfile = [
   {
     name: "Order_ID",
-    width: "w-[80px]",
+    width: "w-[10%]",
   },
   {
     name: "Product_Name",
-    width: "w-[250px]",
+    width: "w-[35%]",
   },
   {
     name: "Units",
-    width: "w-[50px]",
+    width: "w-[9%]",
   },
   {
     name: "Order_Date",
-    width: "w-[100px]",
+    width: "w-[15%]",
   },
   {
     name: "Order_Cost",
-    width: "w-[100px]",
+    width: "w-[13%]",
   },
   {
     name: "Status",
-    width: "w-[120px]",
+    width: "w-[15%]",
+  },
+  {
+    name: "",
+    width: "w-auto",
   },
 ];
 
@@ -1589,4 +1594,51 @@ export const saleReportToggleTab = [
   { name: "Today's", slug: "today's" },
   { name: "Monthly", slug: "monthly" },
   { name: "Yearly", slug: "yearly" },
+];
+
+export const editDropdownData = [{ item: "View" }, { item: "Remove" }];
+
+export const categorySelectBoxData = [
+  {
+    option: "All Category",
+    value: "all-category",
+  },
+  {
+    option: "Men's",
+    value: "men's",
+  },
+  {
+    option: "Women's",
+    value: "women's",
+  },
+  {
+    option: "Kids",
+    value: "kids",
+  },
+  {
+    option: "Others",
+    value: "others",
+  },
+];
+export const orderBySelectBoxData = [
+  {
+    option: "Order By",
+    value: "order-by",
+  },
+  {
+    option: "Latest",
+    value: "latest",
+  },
+  {
+    option: "Price Low - High",
+    value: "priceL2H",
+  },
+  {
+    option: "Price High - Low",
+    value: "priceH2L",
+  },
+  {
+    option: "Others",
+    value: "others",
+  },
 ];

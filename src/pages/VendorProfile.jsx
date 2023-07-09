@@ -66,7 +66,7 @@ const VendorProfile = () => {
       </div>
       <Footer />
     </Layout>
-  );
+  )
 };
 
 export default VendorProfile;

@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap");
+@import "../node_modules/@mdi/font/css/materialdesignicons.min.css";
+@import "/fontawesome-free-6.4.0-web/css/all.min.css";
+@import "../node_modules/flag-icons/css/flag-icons.min.css";
 * {
   font-family: "Shippori Mincho B1", "serif";
 }
 
+.custom-select{
+  appearance: none;
+}
 .search::placeholder {
   font-weight: 700;
 }

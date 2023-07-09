@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const PageHeader = ({ header, pageName, button, pathName, onClick }) => {
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex flex-col gap-2 ">
+    <div className="flex justify-between items-baseline">
+      <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold">{header}</h1>
-        <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
+        <div className="flex justify-center items-baseline gap-2 mb-[20px] font-bold">
           <a href="#" className="text-blue-500">
             Home
           </a>
@@ -22,7 +22,7 @@ const PageHeader = ({ header, pageName, button, pathName, onClick }) => {
         <Link to={pathName}>
           <button
             onClick={onClick}
-            className="px-5 py-3 bg-blue-500 rounded-2xl text-white font-bold text-sm"
+            className="px-5 py-3 bg-blue-500 hover:bg-opacity-70 active:bg-opacity-90 rounded-2xl text-white font-bold text-sm"
           >
             {button}
           </button>

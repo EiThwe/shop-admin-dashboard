@@ -3,7 +3,7 @@ import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const TabSubItem = ({ item, isCurrentRoute }) => {
-  const pathname = "/" + item.toLowerCase().replace(" ", "-");
+  const pathname = "/" + item.toLowerCase().replaceAll(" ", "-");
   if (isCurrentRoute === item) {
   }
   return (

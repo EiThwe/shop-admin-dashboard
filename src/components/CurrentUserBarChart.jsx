@@ -12,7 +12,7 @@ const CurrentUserBarChart = () => {
       </div>
       <div className="w-full border-t">
         <div className="p-5">
-        <a href="#" className="uppercase text-sm text-blue-400">In-Detail-overview</a>
+        <a href="#" className="uppercase text-blue-400 text-xs">In-Detail-overview</a>
         </div>
       </div>
     </div>

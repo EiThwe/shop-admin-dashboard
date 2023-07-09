@@ -34,7 +34,7 @@ const SineWaveGraph = ({ data, data2, data3 }) => {
   };
 
   const chartOptions = {
-    // maintainAspectRatio: false,
+    maintainAspectRatio: false,
     scales: {
       x: {
         grid: {

@@ -7,6 +7,8 @@ import { IoIosArrowForward } from "react-icons/io";
 import Pagination from "../components/Pagination";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import SelectBox from "../components/SelectBox";
+import { categorySelectBoxData, orderBySelectBoxData } from "../utils/data";
 
 const Products = () => {
   const [page, setPage] = useState(1);
@@ -16,7 +18,7 @@ const Products = () => {
   return (
     <Layout>
       {isLoading ? (
-        <div className="w-full h-full bg-gray-100 flex justify-center items-center">
+        <div className="w-full min-h-full  flex justify-center items-center">
           <Loading />
         </div>
       ) : (
@@ -51,12 +53,8 @@ const Products = () => {
                 className="border border-gray-200 rounded-2xl px-5 py-3 w-[50%] text-sm font-semibold search"
               />
               <div className="flex gap-3">
-                <div className="px-3 w-44 py-3 rounded-2xl border border-gray-200 text-gray-400 font-bold uppercase text-xs">
-                  All Category
-                </div>
-                <div className="px-3 w-44 py-3 rounded-2xl border border-gray-200 text-gray-400 font-bold uppercase text-xs">
-                  Ordered by
-                </div>
+                <SelectBox data={categorySelectBoxData} name="category"/>
+                <SelectBox data={orderBySelectBoxData} name="orderBy"/>
               </div>
             </div>
           </div>
@@ -70,7 +68,7 @@ const Products = () => {
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </Layout>
   );
 };

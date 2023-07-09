@@ -8,7 +8,7 @@ const SaleReportSineWave = () => {
   const data3 = [44, 167, 102, 123, 183, 88, 134];
 
   return (
-    <div className="w-full border rounded-xl bg-white shadow-sm">
+    <div className="w-full border rounded-xl bg-white shadow-md">
         <div className="p-5 border-b">
         <h1 className="font-bold">Sale Report</h1>
       </div>

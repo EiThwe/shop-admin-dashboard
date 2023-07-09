@@ -1,5 +1,6 @@
 import React from "react";
 import SineWaveGraph from "./SineWaveGraph";
+import ReportLabels from "./ReportLabels";
 
 const TodaySaleReport = () => {
   const data = [100, 180, 44, 75, 150, 66, 70];
@@ -7,11 +8,11 @@ const TodaySaleReport = () => {
   const data3 = [44, 167, 102, 123, 183, 88, 134];
 
   return (
-    <div>
-      <div className="h-[325px] w-full">
+    <div className="w-full">
+      <div className="w-full h-[280px]">
         <SineWaveGraph data={data} data2={data2} data3={data3} />
-        <div className="w-full h-11 bg-red-300"></div>
       </div>
+      <ReportLabels />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import TableBodyRowVendorProfile from './TableBodyRowVendorProfile'
 
 const TableBodyVendorProfile = () => {
   return (
-    <tbody className="border">
+    <tbody className="">
     {vendorProfileTableRowData.map((data, index) => (
       <TableBodyRowVendorProfile key={index} {...data} />
     ))}

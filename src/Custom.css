@@ -1,0 +1,52 @@
+/* Custom CSS */
+.daterangepicker .calendar-table td,
+.daterangepicker .calendar-table th {
+  color: gray;
+  font-weight: 200;
+}
+
+.daterangepicker .ranges li.active,
+.daterangepicker .ranges li:hover {
+  background-color: transparent;
+  color: #08c;
+}
+
+.daterangepicker .ranges li {
+  color: gray;
+  font-size: 14px;
+}
+.daterangepicker .calendar-table td:hover {
+  background-color: #88aaf3;
+  border-color: transparent;
+  color: #fff;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #357ebd;
+  border-color: transparent;
+  color: #fff;
+}
+.daterangepicker .drp-buttons .applyBtn {
+  /* margin-left: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px; */
+  background-color: #88aaf3;
+  border-color: transparent;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.daterangepicker .drp-buttons .btn {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0.2rem 1.25rem;
+}
+
+.daterangepicker .drp-selected {
+  color: gray;
+}
+.daterangepicker .drp-buttons .cancelBtn {
+  color: gray;
+}

@@ -6,6 +6,7 @@ import MoreDropDown from "./MoreDropDown";
 import { HiOutlineClock, HiOutlineShoppingCart } from "react-icons/hi2";
 import DateDropdown from "./DateDropdown";
 import TableVendorProfile from "./TableVendorProfile";
+import Date from "./Date";
 
 const VendorProfileContainer = () => {
   return (
@@ -62,10 +63,11 @@ const VendorProfileContainer = () => {
       <div className="bg-white mt-6 shadow-md border rounded-xl w-full">
         <div className="flex justify-between items-center px-6 py-4  border-b w-full">
           <h1 className="font-medium text-gray-600 text-lg">Recent Orders</h1>
-           <DateDropdown iconSize={"text-2xl"} />
+           {/* <DateDropdown iconSize={"text-2xl"} /> */}
+           <Date/>
         </div>
         <div className="w-full px-5">
-          <TableVendorProfile/>
+          <TableVendorProfile textSize="text-xs"/>
         </div>
       </div>
     </div>

@@ -15,16 +15,32 @@ import UserProfile from "./pages/UserProfile";
 import VendorGrid from "./pages/VendorGrid";
 import VendorList from "./pages/VendorList";
 import VendorProfile from "./pages/VendorProfile";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import NotFound from "./pages/NotFound";
+import MaterialIcons from "./pages/MaterialIcons";
+import FontAwesomeIcons from "./pages/FontAwesomeIcons";
+import FlagIcons from "./pages/FlagIcons";
+import Brands from "./pages/Brands";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/grid-product" replace={true} />}
-        />
+        <Route path="/" element={<Navigate to="/dashboard" replace={true} />} />
         <Route path="/dashboard" element={<AdminDashboard />} />
+        <Route path="/404-page" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/sign-in" element={<SignIn />} />
+
+        <Route path="/sign-up" element={<SignUp />} />
+
+        <Route path="/material-icons" element={<MaterialIcons />} />
+        <Route path="/font-awesome-icons" element={<FontAwesomeIcons/>} />
+        <Route path="/flag-icons" element={<FlagIcons/>} />
+
+        <Route path="/brands" element={<Brands/>} />
+
         <Route path="/grid-product" element={<Products />} />
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
