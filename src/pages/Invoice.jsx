@@ -10,8 +10,10 @@ import {
 } from "../utils/orderDetailData";
 import { tbodyInvoiceRowData, theadInvoiceData } from "../utils/invoiceData";
 import TableBodyInvoiceRow from "../components/TableBodyInvoiceRow";
+import moment, { now } from "moment";
 
 const Invoice = () => {
+  const nowDate = moment(new Date(), "mmm D YYYY");
   return (
     <Layout>
       <div className="w-full p-8 bg-gray-100 min-h-full">
@@ -37,22 +39,30 @@ const Invoice = () => {
               </button>
             </div>
           </div>
-          <div className="w-full flex justify-between">
-            <div className="from-to w-full row">
-              {/* From */}
-              <div className="">
-                <h1></h1>
-              </div>
+          <div className="info p-5 flex justify-between">
+            <div className="">
+              <div className="from"></div>
+              <div className="to"></div>
             </div>
-            <div className=""></div>
+            <div className="details text-sm font-bold">
+              <h6 className=" text-gray-600 ">Details</h6>
+              <p className=" text-gray-600 ">
+                <span className="text-gray-400">Invoice ID: </span> #2365546
+              </p>
+              <p className=" text-gray-600 ">
+                <span className="text-gray-400">Date: </span>{" "}
+               {nowDate}
+              </p>
+            </div>
           </div>
+
           <div className="w-full p-5">
             {/* table */}
             <StripedTableComponent theadData={theadInvoiceData}>
               {tbodyInvoiceRowData.map((data, index) => (
                 <TableBodyInvoiceRow key={index} {...data} />
               ))}
-              <tr className="">
+              <tr className="border-t border-gray-200">
                 <td
                   className="text-end text-gray-600 font-bold text-sm  py-3 px-1"
                   colSpan={6}
@@ -86,6 +96,9 @@ const Invoice = () => {
                 </td>
               </tr>
             </StripedTableComponent>
+            <button className="py-3 px-5 text-sm text-white bg-blue-400  hover:bg-blue-500 active:bg-opacity-80 float-right rounded-full mb-8">
+              Proceed to Payment
+            </button>
           </div>
         </div>
       </div>
