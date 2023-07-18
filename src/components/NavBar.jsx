@@ -10,14 +10,14 @@ import { ImUser } from "react-icons/im";
 import { CgShapeCircle } from "react-icons/cg";
 import { BiToggleLeft, BiToggleRight } from "react-icons/bi";
 
-const NavBar = ({ showSideBar,setShowSideBar }) => {
+const NavBar = ({ showSideBar, setShowSideBar }) => {
   const [toggle, setToggle] = useState(true);
   return (
     <nav
       className="w-full h-[70px] bg-gray-100 fixed top-0 left-0 border-b-[1px] border-gray-400 
     border-opacity-40 z-10 flex"
     >
-      <div className="min-w-[250px] h-full"></div>
+      <div className={`${showSideBar ? "min-w-[250px] " : "min-w-0"} transition-all ease-in-out duration-200 h-full`}></div>
       <div className="w-full h-full flex md:justify-between justify-end items-center md:px-5">
         <div className="flex gap-5">
           {toggle ? (

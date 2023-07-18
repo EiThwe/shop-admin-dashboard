@@ -22,38 +22,69 @@ import MaterialIcons from "./pages/MaterialIcons";
 import FontAwesomeIcons from "./pages/FontAwesomeIcons";
 import FlagIcons from "./pages/FlagIcons";
 import Brands from "./pages/Brands";
+import Review from "./pages/Review";
+import NewOrder from "./pages/NewOrder";
+import ListProduct from "./pages/ListProduct";
+import OrderHistory from "./pages/OrderHistory";
+import OrderDetail from "./pages/OrderDetail";
+import Invoice from "./pages/Invoice";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Navigate to="/dashboard" replace={true} />} />
+        {/* DashBoard */}
         <Route path="/dashboard" element={<AdminDashboard />} />
-        <Route path="/404-page" element={<NotFound />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/sign-in" element={<SignIn />} />
 
+        {/* Not Found */}
+        <Route path="/404-page" element={<NotFound />} />
+
+        {/* Default */}
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace={true} />} />
+
+        {/* Authentication */}
+        <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
 
+        {/* Icon */}
         <Route path="/material-icons" element={<MaterialIcons />} />
-        <Route path="/font-awesome-icons" element={<FontAwesomeIcons/>} />
-        <Route path="/flag-icons" element={<FlagIcons/>} />
+        <Route path="/font-awesome-icons" element={<FontAwesomeIcons />} />
+        <Route path="/flag-icons" element={<FlagIcons />} />
 
-        <Route path="/brands" element={<Brands/>} />
+        {/* Brand */}
+        <Route path="/brands" element={<Brands />} />
 
+        {/* Review */}
+        <Route path="/reviews" element={<Review />} />
+
+        {/* Product */}
         <Route path="/grid-product" element={<Products />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/list-product" element={<ListProduct />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
+
+        {/* Category */}
         <Route path="/sub-category" element={<SubCategory />} />
         <Route path="/main-category" element={<MainCategory />} />
+
+        {/* User */}
         <Route path="/user-grid" element={<UsersGrid />} />
         <Route path="/user-list" element={<UserList />} />
         <Route path="/users-profile" element={<UserProfile />} />
+
+        {/* Vendor */}
         <Route path="/vendor-grid" element={<VendorGrid />} />
         <Route path="/vendor-list" element={<VendorList />} />
         <Route path="/vendors-profile" element={<VendorProfile />} />
+
+        {/* Order */}
+        <Route path="/new-order" element={<NewOrder />} />
+        <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/order-detail" element={<OrderDetail />} />
+        <Route path="/invoice" element={<Invoice />} />
       </Routes>
     </div>
   );

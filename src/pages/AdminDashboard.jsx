@@ -14,6 +14,8 @@ import RecentOrder from "../components/RecentOrder";
 import NewCustomer from "../components/NewCustomer";
 import TopProducts from "../components/TopProducts";
 import Footer from "../components/Footer";
+import WorldMap from "../components/WorldMap";
+import PurchasedByCountry from "../components/PurchasedByCountry";
 
 const AdminDashboard = () => {
   return (
@@ -43,7 +45,7 @@ const AdminDashboard = () => {
         </div>
         <div className="w-full flex gap-8">
           <div className="w-[65%] ">
-            <UserActivityLineChart />
+            <PurchasedByCountry/>
           </div>
           <div className="w-[35%]">
             <SoldByItemList />

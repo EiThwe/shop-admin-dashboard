@@ -7,7 +7,7 @@ import TableBodyVendorProfile from "./TableBodyVendorProfile";
 
 const TableVendorProfile = ({ textSize }) => {
   return (
-    <table className=" table-fixed border-separate border-spacing-0 w-full">
+    <table className=" table-fixed w-full">
       <TableHeadVendorProfile theadData={theadDataVendorProfile}  textSize={textSize} />
       <TableBodyVendorProfile />
     </table>

@@ -1,0 +1,9 @@
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  display: none !important;
+}
+
+.jvectormap-tip {
+  background-color: white !important;
+  border: 1px solid black !important;
+}

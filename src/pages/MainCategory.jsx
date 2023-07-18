@@ -2,33 +2,26 @@ import React from "react";
 import Layout from "../components/Layout";
 import { IoIosArrowForward } from "react-icons/io";
 import Footer from "../components/Footer";
-import {
-  selectNumberData,
-} from "../utils/data";
+import { selectNumberData } from "../utils/data";
 import TableMainCat from "../components/TableMainCat";
 import TableTopTemplate from "../components/TableTopTemplate";
 import TablePagination from "../components/TablePagination";
+import PageHeader from "../components/PageHeader";
 const MainCategory = () => {
   return (
     <Layout>
       <div className="w-full p-8 bg-gray-100 min-h-full">
-        <div className="flex justify-between items-start">
-          <h1 className="text-2xl font-bold text-gray-600">Main Category</h1>
-          <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
-            <a href="#" className="text-blue-500">
-              Home
-            </a>
-            <IoIosArrowForward className="text-[12px] text-gray-400" />
-            <a href="#" className="text-gray-400">
-              Main Category
-            </a>
-          </div>
-        </div>
+        <PageHeader
+          header={"Main Category"}
+          pageName={"Main Category"}
+          pathName={""}
+          onClick={""}
+        />
         <div className="flex gap-[25px] w-full mt-5 items-start">
           <div className="w-[33%] bg-white rounded-2xl p-6  text-gray-500">
             <div className="flex flex-col gap-7">
               <div className="flex flex-col gap-5">
-                <h1 className="text-xl font-bold">Add New Category</h1>
+                <h1 className="text-lg font-bold">Add New Category</h1>
                 <hr className="h-[1px] bg-gray-400 w-full" />
               </div>
               <div className="flex flex-col gap-3">
@@ -92,11 +85,11 @@ const MainCategory = () => {
               </button>
             </div>
           </div>
-          <div className="w-[67%] bg-white rounded-2xl p-6 text-gray-400">
-            <TableTopTemplate/>
-            <div className="w-full overflow-x-scroll mt-5">
-              <TableMainCat/>
-              <TablePagination showing={10} entries={10}/>
+          <div className="w-[67%] bg-white rounded-2xl py-6 px-4 text-gray-400">
+            <TableTopTemplate />
+            <div className="w-full overflow-x-auto mt-5">
+              <TableMainCat />
+              <TablePagination showing={10} entries={10} />
             </div>
           </div>
         </div>

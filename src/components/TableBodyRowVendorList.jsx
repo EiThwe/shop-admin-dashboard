@@ -30,7 +30,7 @@ const TableBodyRowVendorList = ({
       <td className="h-[60px] w-[120px]   flex items-center px-1">
         <h1>{totalSell}</h1>
       </td>
-      <td className="h-[60px] w-[120px]   flex items-center px-1">{status}</td>
+      <td className="h-[60px] w-[120px]   flex items-center text-xs px-1">{status}</td>
       <td className="h-[60px] w-[120px]   flex items-center px-1">
         <h1>{joinOn}</h1>
       </td>

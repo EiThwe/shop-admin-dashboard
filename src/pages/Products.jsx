@@ -25,8 +25,8 @@ const Products = () => {
         <div className="w-full p-8 bg-gray-100 min-h-full">
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-2 ">
-              <h1 className="text-2xl font-bold">Product</h1>
-              <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
+              <h1 className="text-xl font-bold">Product</h1>
+              <div className="flex justify-center items-center gap-2 mb-[20px] font-bold text-sm">
                 <a href="#" className="text-blue-500">
                   Home
                 </a>

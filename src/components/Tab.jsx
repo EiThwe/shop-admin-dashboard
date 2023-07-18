@@ -3,21 +3,35 @@ import { IoIosArrowForward } from "react-icons/io";
 import TabSubItems from "./TabSubItems";
 import { Link, useLocation, useMatch, useNavigate } from "react-router-dom";
 
-const Tab = ({ item }) => {
+const Tab = ({ item, setData }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { name, pathname, Icon, isBordered, subItems } = item;
-  const [showSubItems, setShowSubItems] = useState(false);
+  const { name, pathname, Icon, isBordered, subItems, isOpen, id } = item;
+  const [showSubItems, setShowSubItems] = useState(isOpen);
   const [isCurrentRoute, setIsCurrentRoute] = useState(null);
 
   useEffect(() => {
+    setShowSubItems(isOpen);
+  }, [isOpen]);
+
+  const toggleTabHandler = () => {
+    setData((prevData) =>
+      prevData.map((data) => {
+        if (data.id == item.id) data.isOpen = !data.isOpen;
+        else data.isOpen = false;
+        return data;
+      })
+    );
+  };
+
+  useEffect(() => {
     const isCurrent = subItems.find((item) => {
-      const path = item.toLowerCase().replaceAll(" ","-");
+      const path = item.toLowerCase().replaceAll(" ", "-");
       // console.log(path);
 
       if (location.pathname === "/" + path && !showSubItems) {
-        setShowSubItems(true);
+        toggleTabHandler();
       }
 
       return location.pathname === "/" + path;
@@ -34,24 +48,24 @@ const Tab = ({ item }) => {
   return (
     <>
       <button
-        className={`w-full flex justify-between items-center p-5 relative  ${
-          isCurrentRoute ? "text-black" : "text-gray-400"
-        }`}
+        className={`w-full flex justify-between items-center p-5 relative ${
+          isBordered && "border-b"
+        }  ${isCurrentRoute ? "text-black" : "text-gray-400"}`}
         onClick={() => {
           console.log("click");
           if (subItems.length == 0) {
             navigate(pathname);
           }
-          setShowSubItems(!showSubItems);
+          toggleTabHandler();
         }}
       >
-        <div className="flex gap-2 justify-start items-center">
+        <div className={`flex gap-2 justify-start items-center `}>
           <Icon
             className={`text-[22px] ${
               isCurrentRoute ? "text-blue-500" : "text-gray-400"
             }`}
           />
-          <p className="text-sm font-bold uppercase">{name}</p>
+          <p className="text-[13px] font-bold uppercase">{name}</p>
         </div>
         {subItems.length > 0 && (
           <div className="flex justify-center items-center">
@@ -61,7 +75,7 @@ const Tab = ({ item }) => {
           </div>
         )}
         {isCurrentRoute && (
-          <div className="absolute w-[5px] rounded-sm bg-blue-500 h-full left-1"></div>
+          <div className="absolute w-[5px]  h-[50px] rounded-full bg-blue-500  left-1"></div>
         )}
       </button>
       {subItems.length > 0 && (

@@ -5,7 +5,7 @@ import TableBodyRowVendorList from "./TableBodyRowVendorList";
 
 const TableBodyVendorList = () => {
   return (
-    <tbody className="border">
+    <tbody className="">
       {vendorListTableRowData.map((data, index) => (
         <TableBodyRowVendorList key={index} {...data} />
       ))}

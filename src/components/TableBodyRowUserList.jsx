@@ -27,7 +27,7 @@ const TableBodyRowUserList = ({
       <td className="h-[60px] w-[120px]   flex items-center px-1">
         {totalBuy}
       </td>
-      <td className="h-[60px] w-[120px]   flex items-center px-1">{status}</td>
+      <td className="h-[60px] w-[120px]   flex items-center px-1 text-xs">{status}</td>
       <td className="h-[60px] w-[120px]   flex items-center px-1">
         <h1>{joinOn}</h1>
       </td>

@@ -1,6 +1,7 @@
 import React from "react";
 import MoreDropDown from "./MoreDropDown";
 import { editDropdownData } from "../utils/data";
+import BadgeComponent from "./BadgeComponent";
 
 const TableBodyRowVendorProfile = ({
   order_id,
@@ -27,23 +28,31 @@ const TableBodyRowVendorProfile = ({
       <td className=" py-7  text-[15px]  px-1">
         <h1 className="text-gray-400">{order_cost}</h1>
       </td>
-      <td className=" py-7   ">
-        <div className="flex items-center justify-start h-full">
-          <div
-            className={`px-3 py-1  rounded-full text-center text-[10px] uppercase
-            ${
-              status.toLowerCase() == "completed" && "bg-green-400  text-white"
-            }  ${
-              (status.toLowerCase() == "delayed" ||
-                status.toLowerCase() == "on hold") &&
-              "bg-yellow-400  text-black"
-            }   ${
-              status.toLowerCase() == "cancelled" && "bg-red-500  text-white"
-            } `}
-          >
-            {status}
-          </div>
-        </div>
+      <td className=" py-7">
+        {status.toLowerCase() == "completed" && (
+          <BadgeComponent
+            className={"bg-green-400  text-white"}
+            status={status}
+          />
+        )}
+        {status.toLowerCase() == "delayed" && (
+          <BadgeComponent
+            className={"bg-blue-500 text-white"}
+            status={status}
+          />
+        )}
+        {status.toLowerCase() == "on hold" && (
+          <BadgeComponent
+            className={"bg-yellow-400  text-black"}
+            status={status}
+          />
+        )}
+        {status.toLowerCase() == "cancelled" && (
+          <BadgeComponent
+            className={"bg-red-500  text-white"}
+            status={status}
+          />
+        )}
       </td>
       <td className=" ">
         <MoreDropDown iconSize={"text-xl"} data={editDropdownData} />

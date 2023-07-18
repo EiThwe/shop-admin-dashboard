@@ -5,8 +5,8 @@ import TableBodyVendorList from "./TableBodyVendorList";
 
 const TableVendorList = ()=> {
   return (
-    <table className=" border-separate border-spacing-0 w-full">
-      <TableHead theadData = {theadDataVendorList} textSize={"text-[14px]"}/>
+    <table className="w-full">
+      <TableHead theadData = {theadDataVendorList} textSize={"text-[13px]"}/>
       <TableBodyVendorList/>
     </table>
   );

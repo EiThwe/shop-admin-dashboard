@@ -40,6 +40,8 @@ export const sidebarData = [
     Icon: MdDashboard,
     isBordered: true,
     subItems: [],
+    isOpen: false,
+    id: 1,
   },
   {
     name: "vendors",
@@ -47,6 +49,8 @@ export const sidebarData = [
     Icon: MdOutlineGroups,
     isBordered: false,
     subItems: ["Vendor Grid", "Vendor List", "Vendors Profile"],
+    isOpen: false,
+    id: 2,
   },
   {
     name: "users",
@@ -54,6 +58,8 @@ export const sidebarData = [
     Icon: MdGroups,
     isBordered: true,
     subItems: ["User Grid", "User List", "Users Profile"],
+    isOpen: false,
+    id: 3,
   },
   {
     name: "categories",
@@ -61,6 +67,8 @@ export const sidebarData = [
     Icon: MdOutlineCategory,
     isBordered: false,
     subItems: ["Main Category", "Sub Category"],
+    isOpen: false,
+    id: 4,
   },
   {
     name: "products",
@@ -68,6 +76,8 @@ export const sidebarData = [
     Icon: MdChair,
     isBordered: false,
     subItems: ["Add Product", "List Product", "Grid Product"],
+    isOpen: false,
+    id: 5,
   },
   {
     name: "orders",
@@ -75,6 +85,8 @@ export const sidebarData = [
     Icon: MdShoppingCart,
     isBordered: false,
     subItems: ["New Order", "Order History", "Order Detail", "Invoice"],
+    isOpen: false,
+    id: 6,
   },
   {
     name: "Reviews",
@@ -82,6 +94,8 @@ export const sidebarData = [
     Icon: ImStarHalf,
     isBordered: false,
     subItems: [],
+    isOpen: false,
+    id: 7,
   },
   {
     name: "Brands",
@@ -89,6 +103,8 @@ export const sidebarData = [
     Icon: BiTagAlt,
     isBordered: true,
     subItems: [],
+    isOpen: false,
+    id: 8,
   },
   {
     name: "Authentication",
@@ -96,6 +112,8 @@ export const sidebarData = [
     Icon: MdLogout,
     isBordered: false,
     subItems: ["Sign in", "Sign Up"],
+    isOpen: false,
+    id: 9,
   },
   {
     name: "Icons",
@@ -103,6 +121,8 @@ export const sidebarData = [
     Icon: BsXDiamondFill,
     isBordered: false,
     subItems: ["Material Icons", "Font Awesome Icons", "Flag Icons"],
+    isOpen: false,
+    id: 10,
   },
 
   {
@@ -111,6 +131,8 @@ export const sidebarData = [
     Icon: MdOutlineCollectionsBookmark,
     isBordered: false,
     subItems: ["404 Page"],
+    isOpen: false,
+    id: 11,
   },
 ];
 

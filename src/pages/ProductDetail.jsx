@@ -8,12 +8,13 @@ import { MdStarRate } from "react-icons/md";
 import ProfileCard from "../components/ProfileCard";
 import { useGetProductByIdQuery } from "../feature/api/productApi";
 import Loading from "../components/Loading";
+import CarouselComponent from "../components/CarouselComponent";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetProductByIdQuery(id);
   const product = data?.data[0];
-  console.log(data);
+  console.log(product);
   return (
     <Layout>
       {isLoading ? (
@@ -49,7 +50,7 @@ const ProductDetail = () => {
             </div>
             <div className="w-full p-8 rounded-b-2xl shadow-xl bg-white">
               <div className="flex w-full mb-[30px] gap-5">
-                <div className="w-[30%] h-full bg-red-300">Hello</div>
+                <div className="w-[30%] h-full "><CarouselComponent images={product.images}/></div>
                 <div className="w-[45%] h-full ">
                   <div className="w-full h-full flex flex-col gap-3">
                     <h2 className="text-lg font-bold text-gray-600">

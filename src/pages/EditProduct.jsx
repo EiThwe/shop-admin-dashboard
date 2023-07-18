@@ -33,7 +33,6 @@ const EditProduct = () => {
   const [activeInputImage, setActiveInputImage] = useState("One");
 
   const { data, isLoading } = useGetProductByIdQuery(id);
- 
 
   useEffect(() => {
     if (data) {
@@ -62,13 +61,18 @@ const EditProduct = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const item = {id, title, price, images: [imageUrlOne,imageUrlTwo,imageUrlThree,imageUrlFour], description };
+    const item = {
+      id,
+      title,
+      price,
+      images: [imageUrlOne, imageUrlTwo, imageUrlThree, imageUrlFour],
+      description,
+    };
     console.log(item);
 
-    const {data} = await updateProduct(item);
+    const { data } = await updateProduct(item);
     console.log(data);
-    
-    
+
     if (data) {
       Swal.fire({
         title: "Success!",
@@ -136,7 +140,7 @@ const EditProduct = () => {
                 <div className="flex flex-col gap-5 w-[30%] h-auto sticky top-[30px]">
                   <div
                     className="w-full min-h-[320px] py-[20px] flex justify-center items-center rounded-2xl border
-               border-gray-200  overflow-hidden"
+               border-gray-200  overflow-hidden bg-[#F3F3F3]"
                   >
                     <img
                       src={imageUrlOne ? imageUrlOne : uploadPreview}

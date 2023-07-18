@@ -42,7 +42,12 @@ const AddProduct = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const item = { title, price, images: [imageUrlOne,imageUrlTwo,imageUrlThree,imageUrlFour], description };
+    const item = {
+      title,
+      price,
+      images: [imageUrlOne, imageUrlTwo, imageUrlThree, imageUrlFour],
+      description,
+    };
     console.log(item);
     const { data, error } = await createProducts(item);
     console.log(data);
@@ -82,8 +87,8 @@ const AddProduct = () => {
         <div className="w-full p-8 bg-gray-100 min-h-full">
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-2 ">
-              <h1 className="text-2xl font-bold">Add Product</h1>
-              <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
+              <h1 className="text-xl font-bold">Add Product</h1>
+              <div className="flex justify-center items-center gap-2 mb-[20px] font-bold text-sm">
                 <a href="#" className="text-blue-500">
                   Home
                 </a>
@@ -109,7 +114,7 @@ const AddProduct = () => {
               <div className="flex flex-col gap-5 w-[30%] h-auto sticky top-[30px]">
                 <div
                   className="w-full min-h-[320px] py-[20px] flex justify-center items-center rounded-2xl border
-             border-gray-200  overflow-hidden"
+             border-gray-200  overflow-hidden bg-[#F3F3F3]"
                 >
                   <img
                     src={imageUrlOne ? imageUrlOne : uploadPreview}
@@ -246,7 +251,7 @@ const AddProduct = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </Layout>
     </>
   );

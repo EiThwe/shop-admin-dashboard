@@ -25,7 +25,7 @@ const UserProfile = () => {
           pathName={"/user-list"}
           onClick={onClickHandler}
         />
-        <div className="w-full bg-white rounded-2xl text-gray-400  flex overflow-hidden">
+        <div className="w-full bg-white rounded-2xl shadow-xl text-gray-400  flex overflow-hidden">
           <div className="w-[28%] p-6  border-r border-gray-200">
             <div className="pb-10 border-b border-gray-200">
               <UserInformation />

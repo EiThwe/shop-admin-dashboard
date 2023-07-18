@@ -30,7 +30,7 @@ const UserList = () => {
         <div className="w-full bg-white rounded-2xl p-6 text-gray-400">
           <TableTopTemplate />
 
-          <div className="my-5 overflow-x-auto">
+          <div className="mt-5 overflow-x-auto">
             <TableUserList />
           <TablePagination showing={20} entries={88} />
           </div>

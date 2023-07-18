@@ -11,28 +11,24 @@ import {
 import Table from "../components/Table";
 import TableTopTemplate from "../components/TableTopTemplate";
 import TablePagination from "../components/TablePagination";
+import PageHeader from "../components/PageHeader";
 
 const SubCategory = () => {
   return (
     <Layout>
       <div className="w-full p-8 bg-gray-100 min-h-full">
-        <div className="flex justify-between items-start">
-          <h1 className="text-2xl font-bold text-gray-600">Sub Category</h1>
-          <div className="flex justify-center items-center gap-2 mb-[20px] font-bold">
-            <a href="#" className="text-blue-500">
-              Home
-            </a>
-            <IoIosArrowForward className="text-[12px] text-gray-400" />
-            <a href="#" className="text-gray-400">
-              Sub Category
-            </a>
-          </div>
-        </div>
+        <PageHeader
+          header={"Sub Category"}
+          pageName={"Sub Category"}
+          pathName={""}
+          onClick={""}
+        />
+
         <div className="flex gap-[25px] w-full mt-5">
           <div className="w-[33%] bg-white rounded-2xl p-6  text-gray-500">
             <div className="flex flex-col gap-7">
               <div className="flex flex-col gap-5">
-                <h1 className="text-xl font-bold">Add Sub Category</h1>
+                <h1 className="text-lg font-bold">Add Sub Category</h1>
                 <hr className="h-[1px] bg-gray-400 w-full" />
               </div>
               <div className="flex flex-col gap-3">
@@ -112,11 +108,11 @@ const SubCategory = () => {
             </div>
           </div>
           <div className="w-[67%]">
-            <div className="w-full bg-white rounded-2xl p-6 text-gray-400">
+            <div className="w-full bg-white rounded-2xl py-6 px-4 text-gray-400">
               <TableTopTemplate />
-              <div className="w-full overflow-x-scroll mt-5">
+              <div className="w-full overflow-x-auto mt-5">
                 <Table />
-                <TablePagination showing={13} entries={13}/>
+                <TablePagination showing={13} entries={13} />
               </div>
             </div>
           </div>
