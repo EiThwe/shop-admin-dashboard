@@ -6,7 +6,7 @@
   font-family: "Shippori Mincho B1", "serif";
 }
 
-.custom-select{
+.custom-select {
   appearance: none;
 }
 .search::placeholder {
@@ -68,11 +68,15 @@
   /* position: absolute; */
   background: transparent;
   /* outline: solid gray 3px; */
-  outline:none;
+  outline: none;
   top: 0;
   left: 0;
 }
 
+.world-map-container {
+  width: 300px; /* Adjust the width of the map here */
+  height: 100px; /* Adjust the height of the map here */
+}
 
 @tailwind base;
 @tailwind components;

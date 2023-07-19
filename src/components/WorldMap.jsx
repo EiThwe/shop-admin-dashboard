@@ -5,11 +5,10 @@ import { colorScale, countries } from "../utils/countries";
 import "../WorldMap.css";
 
 const WorldMap = () => {
-  const tipShowHandler = (event, label, code) =>
-    (
-      <>
-        {countries[code]
-          ? label.html(`
+  const tipShowHandler = (event, label, code) => (
+    <>
+      {countries[code]
+        ? label.html(`
         <div class=" bg-white border-none outline-none border-white outline-white px-2 py-[2px] m-0">
           <p style="color: black !important;" class=" font-bold">
             ${label.html()}
@@ -19,12 +18,12 @@ const WorldMap = () => {
           </p>
         </div>
         `)
-          : label.html("<span></span>")}
-      </>
-    )``;
+        : label.html("<span></span>")}
+    </>
+  );
 
   return (
-    <div className=" m-auto w-full h-[400px]  ">
+    <div className=" w-full h-[350px]">
       <VectorMap
         map={worldMill}
         backgroundColor="#fff"
@@ -46,22 +45,8 @@ const WorldMap = () => {
             },
           ],
         }}
-        onRegionTipShow={(event, label, code) => (
-          <>
-            {countries[code]
-              ? label.html(`
-              <div class=" bg-white border-none outline-none border-white outline-white px-2 py-[2px] m-0">
-                <p style="color: black !important;" class=" font-bold">
-                  ${label.html()}
-                </p>
-                <p class="-mt-[2px]" style="color: black !important;">
-                  Purchased: <span class=" font-bold">${countries[code]}</span>
-                </p>
-              </div>
-              `)
-              : label.html("<span></span>")}
-          </>
-        )}
+        onRegionTipShow={tipShowHandler}
+        
       />
     </div>
   );
