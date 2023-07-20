@@ -3,8 +3,8 @@ import InfoDropdown from "./InfoDropdown";
 import { listProductDropdown } from "../utils/listProductData";
 
 const TableBodyListProductRow = ({
-  image,
-  name,
+  images,
+  title,
   price,
   offer,
   purchased,
@@ -16,11 +16,11 @@ const TableBodyListProductRow = ({
     <tr className="border-b">
       <td className=" flex items-center py-3 px-1 ">
         <div className="w-[45px] h-[45px] rounded-xl overflow-hidden border-gray-400">
-          <img src={image} alt="" />
+          <img src={images[0]} alt="" />
         </div>
       </td>
       <td className=" py-3 px-1 ">
-        <h6 className="text-gray-600 font-medium text-[13px]">{name}</h6>
+        <h6 className="text-gray-600 font-medium text-[13px]">{title}</h6>
       </td>
       <td className=" py-3 px-1 ">
         <h6 className="text-gray-500 text-sm font-bold">{price}</h6>

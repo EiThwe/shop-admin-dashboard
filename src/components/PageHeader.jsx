@@ -12,7 +12,7 @@ const PageHeader = ({ header, pageName, button, pathName, onClick }) => {
       >
         <h1 className="text-xl font-bold">{header}</h1>
         <div className="flex justify-center items-baseline gap-2 mb-[20px] font-bold text-[14px]">
-          <a href="#" className="text-blue-500">
+          <a href="/" className="text-blue-500">
             Home
           </a>
           <IoIosArrowForward className="text-[12px]" />

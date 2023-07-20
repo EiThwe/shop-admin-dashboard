@@ -5,7 +5,7 @@ import { newCustomerData } from "../utils/newCustomerData";
 
 const NewCustomer = () => {
   return (
-    <div className="newCustomer w-full border rounded-xl bg-white shadow-md">
+    <div className="newCustomer w-full border rounded-xl bg-white shadow-xl">
       <div className="p-5 border-b w-full flex justify-between items-center">
         <h1 className="font-bold">New Customers</h1>
         <div className="flex gap-3">
