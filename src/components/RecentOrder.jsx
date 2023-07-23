@@ -1,7 +1,6 @@
 import React from "react";
 import TableVendorProfile from "./TableVendorProfile";
 import Date from "./Date";
-
 const RecentOrder = () => {
   return (
     <div className="bg-white shadow-xl border rounded-xl w-full">

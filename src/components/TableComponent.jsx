@@ -8,7 +8,7 @@ import TableBodyRowVendorList from "./TableBodyRowVendorList";
 import { theadDataVendorList, vendorListTableRowData } from "../utils/data";
 import TableHeadComponent from "./TableHeadComponent";
 
-const TableComponent = ({ theadData,children,showing,entries }) => {
+const TableComponent = ({ theadData,children,showing,entries,setPage,initial }) => {
   return (
     <div className="w-full bg-white rounded-2xl p-6 text-gray-400">
       <TableTopTemplate />
@@ -18,7 +18,7 @@ const TableComponent = ({ theadData,children,showing,entries }) => {
           <TableHeadComponent theadData={theadData} textSize={"text-[13px]"} />
           <tbody className="">{children}</tbody>
         </table>
-        <TablePagination showing={showing} entries={entries} />
+        <TablePagination showing={showing} entries={entries} setPage={setPage} initial={initial}/>
       </div>
     </div>
   );

@@ -22,10 +22,10 @@
 
 export const theadListProductData = [
     {name: "Product",width: "w-[10%]"},
-    {name: "Name",width: "w-[18%]"},
+    {name: "Name",width: "w-[20%]"},
     {name: "Price",width: "w-[9%]"},
     {name: "Offer",width: "w-[9%]"},
-    {name: "Purchased",width: "w-[15%]"},
+    {name: "Purchased",width: "w-[13%]"},
     {name: "Stock",width: "w-[9%]"},
     {name: "Status",width: "w-[9%]"},
     {name: "Date",width: "w-[9%]"},

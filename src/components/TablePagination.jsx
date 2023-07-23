@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TablePagination = ({ showing, entries }) => {
+const TablePagination = ({ showing, entries, setPage, initial }) => {
   const [pages, setPages] = useState([]);
   const [activePage, setActivePage] = useState(1);
 
@@ -16,11 +16,21 @@ const TablePagination = ({ showing, entries }) => {
   };
 
   useEffect(() => {
+    if (setPage) {
+      setPage(activePage);
+    }
+  }, [activePage]);
+  useEffect(() => {
     pageCaculation();
   }, [showing, entries]);
 
   const pageCaculation = () => {
-    const pageNumber = Math.ceil(entries / showing);
+    let pageNumber;
+    if (entries > showing) {
+      pageNumber = Math.ceil(entries / showing);
+    }else{
+      pageNumber = Math.ceil(showing / entries);
+    }
     const pageArr = [];
     //generate pages
     for (let i = 1; i <= pageNumber; i++) {
@@ -32,7 +42,8 @@ const TablePagination = ({ showing, entries }) => {
   return (
     <div className="flex justify-between my-3 items-center">
       <h6 className="text-sm font-medium text-gray-600">
-        Showing 1 to {showing} of {entries} entries
+        Showing {initial ? initial + 1 : 1} to{" "}
+        {showing < entries ? showing : entries} of {entries} entries
       </h6>
       <div className="flex font-medium text-sm">
         <button
@@ -47,7 +58,9 @@ const TablePagination = ({ showing, entries }) => {
               activePage == page && "text-white bg-blue-400 border-blue-400"
             }`}
             key={page}
-            onClick={() => setActivePage(page)}
+            onClick={() => {
+              setActivePage(page);
+            }}
           >
             {page}
           </button>
