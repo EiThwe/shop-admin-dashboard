@@ -9,7 +9,7 @@ const HorizontalBarChart = ({ labels, data1 }) => {
         label: "Sign Up",
         data: data1,
         backgroundColor: "#88AAF3",
-        
+
         barThickness: 15,
       },
     ],

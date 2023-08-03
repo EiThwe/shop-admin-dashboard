@@ -56,7 +56,7 @@ const AddNewVendor = ({ setShowAddVendorCard }) => {
           ))}
         </div>
         <div className="w-full h-[80px] rounded-b-3xl flex gap-3 justify-end items-center px-3 font-bold">
-          <button className="w-[80px] h-[40px] bg-gray-400 text-white rounded-full text-xs">
+          <button onClick={()=>setShowAddVendorCard(false)} className="w-[80px] h-[40px] bg-gray-400 text-white rounded-full text-xs">
             Cancel
           </button>
           <button className="w-[130px] h-[40px] bg-blue-400 hover:bg-[#447db9] text-white rounded-full text-xs">

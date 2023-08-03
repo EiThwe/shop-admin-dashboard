@@ -1618,7 +1618,7 @@ export const saleReportToggleTab = [
   { name: "Yearly", slug: "yearly" },
 ];
 
-export const editDropdownData = [{ item: "View" }, { item: "Remove" }];
+export const editDropdownData = ["View", "Remove"];
 
 export const categorySelectBoxData = [
   {

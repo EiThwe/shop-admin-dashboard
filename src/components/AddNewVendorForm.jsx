@@ -90,10 +90,10 @@ const AddNewVendorForm = ({ setShowAddVendor }) => {
             </div>
           </div>
           <div className="flex justify-end items-center gap-2 border-t border-gray-200 w-full px-8 pb-3 pt-[14px] text-sm font-semibold">
-            <button className="px-3 py-2 bg-gray-400 text-white rounded-full">
+            <button type="button" onClick={()=>setShowAddVendor(false)} className="px-3 py-2 bg-gray-400 text-white rounded-full">
               Cancel
             </button>
-            <button className="px-3 py-2 bg-blue-400 text-white rounded-full">
+            <button type="button" onClick={()=>setShowAddVendor(false)} className="px-3 py-2 bg-blue-400 text-white rounded-full">
               Save Changes
             </button>
           </div>

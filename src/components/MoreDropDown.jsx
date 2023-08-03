@@ -14,8 +14,8 @@ const MoreDropDown = ({ iconSize, textColor, data }) => {
       <div className="relative">
         {showDropdown && (
           <ul className="bg-white border shadow-md rounded-xl w-[170px] p-3 flex flex-col gap-3 absolute text-sm top-1 right-0">
-           { data ? (
-              data.map((item, i) => (
+            {data ? (
+              data.map(( item , i) => (
                 <li key={i}>
                   <a href="#" className="hover:text-blue-400">
                     {item}
